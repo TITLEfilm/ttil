@@ -1088,13 +1088,6 @@ html, body {
     margin-left: -370px;
 }
 
-/* Сброс отступов у body */
-html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
 .main-gray-rectangle {
     position: relative;
     width: 100%;
@@ -1102,28 +1095,41 @@ html, body {
     height: 480px;
     margin-top: -60px;
     margin-bottom: 50px;
-    overflow: visible;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px; /* ОТСТУП МЕЖДУ ВСЕМИ КАРТИНКАМИ */
-    padding: 0;
 }
 
 .small-rectangle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     width: 750px;
     height: 420px;
-    flex-shrink: 0;
-    position: relative;
 }
 
-/* Выезд за экран */
+/* Первая картинка */
 .rectangle-1 {
-    margin-left: -150px; /* Выезжает влево */
+    left: 20px; /* Прижимаем к левому краю */
 }
 
+/* Вторая картинка — по центру */
+.rectangle-2 {
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Третья картинка */
 .rectangle-3 {
-    margin-right: -150px; /* Выезжает вправо */
+    right: 20px; /* Прижимаем к правому краю */
+}
+
+/* Отступ между картинками через ширину */
+.rectangle-1 {
+    width: 700px;
+}
+.rectangle-2 {
+    width: 700px;
+}
+.rectangle-3 {
+    width: 700px;
 }
 
 .small-rectangle img {
@@ -1131,13 +1137,6 @@ html, body {
     height: 100%;
     object-fit: cover;
     display: block;
-}
-.rectangle-2 {
-    margin-right: 20px; /* Принудительный отступ справа */
-}
-
-.rectangle-3 {
-    margin-left: 0;
 }
 .text {
     font-family: 'Gerhaus', 'Rubik', sans-serif;
