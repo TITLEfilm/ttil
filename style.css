@@ -1089,34 +1089,33 @@ html, body {
 }
 
 .main-gray-rectangle {
+    position: relative;
     width: 100%;
     background-color: rgba(217, 217, 217, 0.1);
-    display: grid;
-    grid-template-columns: 1fr auto 1fr; /* Левая | Центр | Правая */
-    align-items: center;
-    gap: 20px;
-    padding: 30px;
-    box-sizing: border-box;
+    height: 480px;
     margin-top: -60px;
     margin-bottom: 50px;
 }
 
-.rectangle-1 {
-    justify-self: start; /* Прижимаем влево */
+.small-rectangle {
+    position: absolute;
     width: 280px;
     height: 420px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.rectangle-1 {
+    left: 20px;
 }
 
 .rectangle-2 {
-    justify-self: center; /* По центру */
-    width: 280px;
-    height: 420px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .rectangle-3 {
-    justify-self: end; /* Прижимаем вправо */
-    width: 280px;
-    height: 420px;
+    right: 20px;
 }
 
 .small-rectangle img {
