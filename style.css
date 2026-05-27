@@ -1095,27 +1095,31 @@ html, body {
     height: 480px;
     margin-top: -60px;
     margin-bottom: 50px;
+    overflow: hidden; /* Обрезает выступающие части картинок */
 }
 
 .small-rectangle {
     position: absolute;
-    width: 280px;
+    width: 350px; /* Шире, чтобы выходили за экран */
     height: 420px;
     top: 50%;
     transform: translateY(-50%);
 }
 
+/* ПЕРВАЯ КАРТИНКА - выступает влево */
 .rectangle-1 {
-    left: 20px;
+    left: -70px; /* Отрицательное значение — уходит влево за экран */
 }
 
+/* ВТОРАЯ - по центру */
 .rectangle-2 {
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
+/* ТРЕТЬЯ - выступает вправо */
 .rectangle-3 {
-    right: 20px;
+    right: -70px; /* Отрицательное значение — уходит вправо за экран */
 }
 
 .small-rectangle img {
