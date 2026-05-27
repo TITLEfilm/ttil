@@ -1103,36 +1103,27 @@ html, body {
     margin-top: -60px;
     margin-bottom: 50px;
     overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* ОТСТУП МЕЖДУ ВСЕМИ КАРТИНКАМИ */
+    padding: 0;
 }
 
 .small-rectangle {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     width: 750px;
     height: 420px;
+    flex-shrink: 0;
+    position: relative;
 }
 
-/* ПЕРВАЯ КАРТИНКА - выходит за левый край */
+/* Выезд за экран */
 .rectangle-1 {
-    left: -150px;  /* Отрицательное значение — выезжает влево */
+    margin-left: -150px; /* Выезжает влево */
 }
 
-/* ВТОРАЯ КАРТИНКА - по центру */
-.rectangle-2 {
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* ТРЕТЬЯ КАРТИНКА - выходит за правый край */
 .rectangle-3 {
-    right: -150px; /* Отрицательное значение — выезжает вправо */
-}
-
-/* Отступ между картинками (через смещение второй) */
-.rectangle-2 {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-right: -150px; /* Выезжает вправо */
 }
 
 .small-rectangle img {
