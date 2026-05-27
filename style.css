@@ -1132,7 +1132,8 @@ html, body {
     display: block;
 }
 .rectangle-3 {
-    right: -130px; /* Было -150, стало -130 = отступ 20px */
+    right: -150px;
+    transform: translateY(-50%) translateX(-20px);
 }
 .text {
     font-family: 'Gerhaus', 'Rubik', sans-serif;
