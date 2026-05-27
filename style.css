@@ -1095,38 +1095,49 @@ html, body {
     height: 480px;
     margin-top: -60px;
     margin-bottom: 50px;
-    overflow: visible; /* Чтобы видеть выезд */
+    overflow: hidden;
 }
 
 .small-rectangle {
     position: absolute;
-    width: 500px;
+    /* ШИРИНА УВЕЛИЧЕНА В 2.5 РАЗА: 300px → 750px */
+    width: 750px;
     height: 420px;
     top: 50%;
     transform: translateY(-50%);
 }
 
-/* Первая — выезжает влево */
 .rectangle-1 {
-    left: -100px;
+    left: 0;
 }
 
-/* Вторая — по центру */
 .rectangle-2 {
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-/* Третья — выезжает вправо */
 .rectangle-3 {
-    right: -100px;
+    right: 0;
 }
 
 .small-rectangle img {
-    width: 300px;
+    width: 750px;
     height: 420px;
     object-fit: cover;
     display: block;
+    flex-shrink: 0;
+}
+.rectangle-1 {
+    left: -375px; /* Половина от 750px → уезжает влево */
+}
+
+.rectangle-2 {
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rectangle-3 {
+    right: -375px; /* Половина от 750px → уезжает вправо */
 }
 .text {
     font-family: 'Gerhaus', 'Rubik', sans-serif;
