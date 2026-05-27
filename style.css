@@ -1105,7 +1105,14 @@ html, body {
     top: 50%;
     transform: translateY(-50%);
 }
+body, html {
+    overflow-x: visible; /* Разрешает выезд за пределы */
+    max-width: 100%;
+}
 
+.main-gray-rectangle {
+    overflow: visible; /* Важно! */
+}
 /* ПЕРВАЯ КАРТИНКА - выступает влево */
 .rectangle-1 {
     left: -150px; /* Отрицательное значение — уходит влево за экран */
