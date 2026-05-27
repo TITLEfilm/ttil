@@ -1111,29 +1111,15 @@ html, body {
     left: -150px;
 }
 
-/* 2-я картинка — по центру + отступы */
+/* 2-я картинка — по центру */
 .rectangle-2 {
     left: 50%;
-    transform: translate(-50%, -50%);
-    margin-left: 20px !important;
-    margin-right: 20px !important;
+    transform: translate(calc(-50% + 20px), -50%); /* Сдвиг вправо на 20px */
 }
 
-/* 3-я картинка — прижата к правому краю + отступ слева */
+/* 3-я картинка */
 .rectangle-3 {
-    right: -150px;
-    margin-left: 20px !important; /* Отступ слева для 3-й картинки */
-}
-
-.small-rectangle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-.rectangle-3 {
-    right: -150px;
-    transform: translateY(-50%) translateX(-20px);
+    right: -170px; /* Вместо -150 делаем -170 = отступ 20px слева */
 }
 .text {
     font-family: 'Gerhaus', 'Rubik', sans-serif;
