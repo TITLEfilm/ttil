@@ -1109,15 +1109,21 @@ html, body {
 
 .rectangle-1 {
     left: 0;
+    width: 750px;
+    height: 420px;
 }
 
 .rectangle-2 {
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 750px;
+    height: 420px;
 }
 
 .rectangle-3 {
     right: 0;
+    width: 750px;
+    height: 420px;
 }
 
 .small-rectangle img {
@@ -1127,18 +1133,7 @@ html, body {
     display: block;
     flex-shrink: 0;
 }
-.rectangle-1 {
-    left: -375px; /* Половина от 750px → уезжает влево */
-}
 
-.rectangle-2 {
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.rectangle-3 {
-    right: -375px; /* Половина от 750px → уезжает вправо */
-}
 .text {
     font-family: 'Gerhaus', 'Rubik', sans-serif;
     color:  #94251E;
