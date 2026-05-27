@@ -1088,33 +1088,44 @@ html, body {
     margin-left: -370px;
 }
 
-/* ===== ОСНОВНОЙ ПРЯМОУГОЛЬНИК #D9D9D9 С ПРОЗРАЧНОСТЬЮ 10% ===== */
-.main-gray-rectangle {
+/* styles.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
     width: 100%;
-    background-color: rgba(217, 217, 217, 0.1);
+}
+
+.main-gray-rectangle {
     display: flex;
-    height: 480px; /* Было 380px */
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 60px; /* Было 20px */
-    padding: 30px;
-    position: relative;
-    overflow: hidden;
-    box-sizing: border-box;
+    background-color: rgba(217, 217, 217, 0.1);
+    height: 480px;
+    width: 100%;
     margin-top: -60px;
     margin-bottom: 50px;
+    overflow: visible;
+    padding: 0;
+    /* Жесткая фиксация ряда */
+    flex-wrap: nowrap;
 }
 
-/* ОБЩИЕ СТИЛИ ДЛЯ МАЛЕНЬКИХ ПРЯМОУГОЛЬНИКОВ */
 .small-rectangle {
-    height: 420px; /* Было 300px */
+    width: 750px;
+    height: 420px;
     flex-shrink: 0;
-    overflow: hidden;
+    flex-grow: 0;
+    /* Жестко фиксируем позицию */
     position: relative;
 }
 
-/* СТИЛИ ДЛЯ ИЗОБРАЖЕНИЙ ВНУТРИ ПРЯМОУГОЛЬНИКОВ */
 .small-rectangle img {
     width: 100%;
     height: 100%;
@@ -1122,21 +1133,42 @@ html, body {
     display: block;
 }
 
-/* ПЕРВЫЙ ПРЯМОУГОЛЬНИК */
+/* Жесткие отступы между картинками */
 .rectangle-1 {
-    width: calc(33.33% - -100px);
+    margin-right: 10px;
+    margin-left: 0;
 }
 
-/* ВТОРОЙ ПРЯМОУГОЛЬНИК - ПО ЦЕНТРУ */
 .rectangle-2 {
-    width: calc(33.33% - -100px);
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-/* ТРЕТИЙ ПРЯМОУГОЛЬНИК - СИММЕТРИЧНО ПЕРВОМУ */
 .rectangle-3 {
-    width: calc(33.33% - -100px);
+    margin-left: 10px;
+    margin-right: 0;
 }
 
+/* Жесткий выезд за экран - фиксированными значениями */
+.rectangle-1 {
+    margin-left: -150px;
+}
+
+.rectangle-3 {
+    margin-right: -150px;
+}
+
+/* Дополнительная жесткая фиксация - запрещаем любые трансформации */
+.main-gray-rectangle,
+.small-rectangle,
+.rectangle-1,
+.rectangle-2,
+.rectangle-3 {
+    transform: none;
+    top: 0;
+    bottom: auto;
+    vertical-align: top;
+}
 .text {
     font-family: 'Gerhaus', 'Rubik', sans-serif;
     color:  #94251E;
