@@ -1088,20 +1088,9 @@ html, body {
     margin-left: -370px;
 }
 
-/* styles.css */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    overflow-x: hidden;
-}
-
 .main-gray-rectangle {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: rgba(217, 217, 217, 0.1);
@@ -1109,21 +1098,18 @@ body {
     margin-top: -60px;
     margin-bottom: 50px;
     overflow-x: clip;
-}
-
-/* Контейнер для трех прямоугольников в ряд */
-.rectangles-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    overflow-y: visible;
+    /* Жестко — никаких отступов по бокам */
+    padding: 0;
+    /* Запрещаем перенос на новую строку */
+    flex-wrap: nowrap;
 }
 
 .small-rectangle {
     width: 750px;
     height: 420px;
     flex-shrink: 0;
+    flex-grow: 0;
 }
 
 /* Отступ между всеми картинками */
