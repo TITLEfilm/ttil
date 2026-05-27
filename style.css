@@ -1088,44 +1088,32 @@ html, body {
     margin-left: -370px;
 }
 
+/* ===== ОСНОВНОЙ ПРЯМОУГОЛЬНИК ===== */
 .main-gray-rectangle {
-    position: relative;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(217, 217, 217, 0.1);
     height: 480px;
     margin-top: -60px;
     margin-bottom: 50px;
-    overflow: visible;
+    overflow-x: clip;
+    gap: 20px; /* ОТСТУП МЕЖДУ ВСЕМИ ТРЕМЯ КАРТИНКАМИ */
 }
 
 .small-rectangle {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 750px;
+    width: 300px;
     height: 420px;
+    flex-shrink: 0;
 }
 
-/* 1-я картинка (слева) */
+/* ВЫЕЗД ЗА ЭКРАН */
 .rectangle-1 {
-    left: -150px;
+    margin-left: -150px;
 }
 
-/* 2-я картинка (по центру) */
-.rectangle-2 {
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* 3-я картинка (справа) */
 .rectangle-3 {
-    right: -150px;
-}
-
-/* ЯВНЫЙ ОТСТУП МЕЖДУ КАРТИНКАМИ ЧЕРЕЗ СДВИГ 2-Й */
-.rectangle-2 {
-    margin-left: 20px !important;
-    margin-right: 20px !important;
+    margin-right: -150px;
 }
 
 .small-rectangle img {
@@ -1133,7 +1121,7 @@ html, body {
     height: 100%;
     object-fit: cover;
     display: block;
-} 
+}
 .text {
     font-family: 'Gerhaus', 'Rubik', sans-serif;
     color:  #94251E;
