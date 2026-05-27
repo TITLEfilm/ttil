@@ -1113,7 +1113,8 @@ html, body {
     margin-bottom: 50px;
     overflow: visible;
     padding: 0;
-    gap: 0;
+    /* ГЛАВНОЕ - запрещаем перенос на новую строку */
+    flex-wrap: nowrap;
 }
 
 .small-rectangle {
@@ -1127,13 +1128,13 @@ html, body {
 }
 
 .small-rectangle img {
-    width: 750px;
-    height: 420px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     display: block;
 }
 
-/* Отступы */
+/* Отступы между картинками */
 .rectangle-1 {
     margin-right: 10px;
 }
