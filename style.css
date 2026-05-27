@@ -1132,6 +1132,13 @@ html, body {
     object-fit: cover;
     display: block;
 }
+.rectangle-2 {
+    margin-right: 20px; /* Принудительный отступ справа */
+}
+
+.rectangle-3 {
+    margin-left: 0;
+}
 .text {
     font-family: 'Gerhaus', 'Rubik', sans-serif;
     color:  #94251E;
