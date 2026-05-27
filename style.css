@@ -1088,24 +1088,41 @@ html, body {
     margin-left: -370px;
 }
 
-/* ===== ОСНОВНОЙ ПРЯМОУГОЛЬНИК ===== */
 .main-gray-rectangle {
     display: flex;
-    justify-content: space-between;  /* Раздвигает картинки к краям */
+    justify-content: center;
     align-items: center;
     background-color: rgba(217, 217, 217, 0.1);
-    height: 420px;  /* Фиксированная высота как у картинок */
+    height: 480px;
     margin-top: -60px;
     margin-bottom: 50px;
-    padding: 0;
-    overflow: hidden;
+    overflow-x: clip;
 }
 
-/* Все три картинки ОДИНАКОВЫЕ */
 .small-rectangle {
-    width: 300px;
+    width: 750px;
     height: 420px;
     flex-shrink: 0;
+}
+
+/* Отступ между всеми картинками */
+.rectangle-1 {
+    margin-right: 10px;
+}
+.rectangle-2 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.rectangle-3 {
+    margin-left: 10px;
+}
+
+/* Выезд за экран */
+.rectangle-1 {
+    margin-left: -150px;
+}
+.rectangle-3 {
+    margin-right: -150px;
 }
 
 .small-rectangle img {
@@ -1113,16 +1130,6 @@ html, body {
     height: 100%;
     object-fit: cover;
     display: block;
-}
-
-/* Первая — уходит влево */
-.rectangle-1 {
-    transform: translateX(-100px);
-}
-
-/* Третья — уходит вправо */
-.rectangle-3 {
-    transform: translateX(100px);
 }
 .text {
     font-family: 'Gerhaus', 'Rubik', sans-serif;
@@ -2364,4 +2371,10 @@ footer::before {
     .text {
         font-size: 14px;
     }
+}
+/* ДОБАВЬ ЭТО В КОНЕЦ ФАЙЛА, НИЧЕГО НЕ УДАЛЯЯ */
+
+/* Заставляем третью картинку отодвинуться */
+.rectangle-3 {
+    margin-left: 30px !important;  /* Отступ от второй */
 }
