@@ -1095,34 +1095,18 @@ html, body {
     height: 480px;
     margin-top: -60px;
     margin-bottom: 50px;
-    overflow: visible;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;  /* Отступ между картинками */
+    padding: 0;
 }
 
 .small-rectangle {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     width: 750px;
     height: 420px;
-}
-
-/* 1-я картинка */
-.rectangle-1 {
-    left: -150px;
-}
-
-/* 2-я картинка — по центру + отступы */
-.rectangle-2 {
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-left: 20px !important;
-    margin-right: 20px !important;
-}
-
-/* 3-я картинка — прижата к правому краю + отступ слева */
-.rectangle-3 {
-    right: -150px;
-    margin-left: 20px !important; /* Отступ слева для 3-й картинки */
+    flex-shrink: 0;
 }
 
 .small-rectangle img {
@@ -1130,6 +1114,21 @@ html, body {
     height: 100%;
     object-fit: cover;
     display: block;
+}
+.main-gray-rectangle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow: visible;
+}
+
+.rectangle-1 {
+    margin-left: -150px;  /* Выезжает влево */
+}
+
+.rectangle-3 {
+    margin-right: -150px;  /* Выезжает вправо */
 }
 .text {
     font-family: 'Gerhaus', 'Rubik', sans-serif;
