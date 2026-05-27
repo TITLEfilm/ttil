@@ -1089,47 +1089,31 @@ html, body {
 }
 
 .main-gray-rectangle {
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
     width: 100%;
     background-color: rgba(217, 217, 217, 0.1);
     height: 480px;
     margin-top: -60px;
     margin-bottom: 50px;
+    overflow-x: clip;
 }
 
 .small-rectangle {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     width: 750px;
     height: 420px;
+    flex-shrink: 0;
 }
 
-/* Первая картинка */
+/* Выезд за экран */
 .rectangle-1 {
-    left: 20px; /* Прижимаем к левому краю */
-}
-
-/* Вторая картинка — по центру */
-.rectangle-2 {
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Третья картинка */
-.rectangle-3 {
-    right: 20px; /* Прижимаем к правому краю */
-}
-
-/* Отступ между картинками через ширину */
-.rectangle-1 {
-    width: 700px;
-}
-.rectangle-2 {
-    width: 700px;
+    transform: translateX(-100px);
 }
 .rectangle-3 {
-    width: 700px;
+    transform: translateX(100px);
 }
 
 .small-rectangle img {
