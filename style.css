@@ -1094,26 +1094,46 @@ html, body {
     background-color: rgba(217, 217, 217, 0.1);
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between; /* Раздвигает картинки к краям */
     align-items: center;
-    gap: 30px;
+    height: 480px;
     padding: 30px;
     box-sizing: border-box;
     margin-top: -60px;
     margin-bottom: 50px;
-    flex-wrap: wrap; /* Для безопасности на маленьких экранах */
+    overflow: hidden;
 }
 
 /* ОБЩИЕ СТИЛИ ДЛЯ МАЛЕНЬКИХ ПРЯМОУГОЛЬНИКОВ */
 .small-rectangle {
-    width: 280px;          /* Фиксированная ширина вместо % */
-    height: 420px;
     flex-shrink: 0;
     overflow: hidden;
     position: relative;
 }
 
-/* СТИЛИ ДЛЯ ИЗОБРАЖЕНИЙ ВНУТРИ ПРЯМОУГОЛЬНИКОВ */
+/* ПЕРВЫЙ ПРЯМОУГОЛЬНИК - ПРИЖАТ К ЛЕВОМУ КРАЮ */
+.rectangle-1 {
+    width: 30%;
+    height: 420px;
+    margin-right: auto; /* Прижимает к левому краю */
+}
+
+/* ВТОРОЙ ПРЯМОУГОЛЬНИК - ПО ЦЕНТРУ */
+.rectangle-2 {
+    width: 30%;
+    height: 420px;
+    margin-left: auto;
+    margin-right: auto; /* Центрирует */
+}
+
+/* ТРЕТИЙ ПРЯМОУГОЛЬНИК - ПРИЖАТ К ПРАВОМУ КРАЮ */
+.rectangle-3 {
+    width: 30%;
+    height: 420px;
+    margin-left: auto; /* Прижимает к правому краю */
+}
+
+/* СТИЛИ ДЛЯ ИЗОБРАЖЕНИЙ */
 .small-rectangle img {
     width: 100%;
     height: 100%;
