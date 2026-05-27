@@ -1088,6 +1088,13 @@ html, body {
     margin-left: -370px;
 }
 
+/* Сброс отступов у body */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 .main-gray-rectangle {
     position: relative;
     width: 100%;
@@ -1095,25 +1102,37 @@ html, body {
     height: 480px;
     margin-top: -60px;
     margin-bottom: 50px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    box-sizing: border-box;
+    overflow: visible;
 }
 
 .small-rectangle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     width: 750px;
     height: 420px;
-    flex-shrink: 0;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+}
+
+/* ПЕРВАЯ КАРТИНКА - выходит за левый край */
+.rectangle-1 {
+    left: -150px;  /* Отрицательное значение — выезжает влево */
+}
+
+/* ВТОРАЯ КАРТИНКА - по центру */
+.rectangle-2 {
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ТРЕТЬЯ КАРТИНКА - выходит за правый край */
+.rectangle-3 {
+    right: -150px; /* Отрицательное значение — выезжает вправо */
+}
+
+/* Отступ между картинками (через смещение второй) */
+.rectangle-2 {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .small-rectangle img {
@@ -1121,15 +1140,6 @@ html, body {
     height: 100%;
     object-fit: cover;
     display: block;
-}
-
-/* Дополнительная страховка для 1 и 3 картинки */
-.rectangle-1 {
-    margin-left: 0 !important;
-}
-
-.rectangle-3 {
-    margin-right: 0 !important;
 }
 .text {
     font-family: 'Gerhaus', 'Rubik', sans-serif;
