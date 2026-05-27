@@ -1131,6 +1131,9 @@ html, body {
     object-fit: cover;
     display: block;
 }
+.rectangle-3 {
+    right: -130px; /* Было -150, стало -130 = отступ 20px */
+}
 .text {
     font-family: 'Gerhaus', 'Rubik', sans-serif;
     color:  #94251E;
