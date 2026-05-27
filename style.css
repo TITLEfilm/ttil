@@ -1088,45 +1088,37 @@ html, body {
     margin-left: -370px;
 }
 
-/* styles.css */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    overflow-x: hidden;
-    width: 100%;
-}
-
+/* ===== ОСНОВНОЙ ПРЯМОУГОЛЬНИК С GRID ===== */
 .main-gray-rectangle {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(217, 217, 217, 0.1);
-    height: 480px;
     width: 100%;
+    background-color: rgba(217, 217, 217, 0.1);
+    display: grid;
+    /* Сетка из трёх колонок: 
+       1fr - первая картинка (обрезается слева)
+       auto - вторая картинка (по центру)
+       1fr - третья картинка (обрезается справа) */
+    grid-template-columns: 1fr auto 1fr;
+    /* Отступ между элементами сетки 20px */
+    gap: 20px;
+    height: 480px;
     margin-top: -60px;
     margin-bottom: 50px;
     overflow: visible;
+    position: relative;
+    /* Убираем отступы по бокам */
     padding: 0;
-    /* ГЛАВНОЕ - запрещаем перенос на новую строку */
-    flex-wrap: nowrap;
 }
 
+/* ОБЩИЕ СТИЛИ ДЛЯ МАЛЕНЬКИХ ПРЯМОУГОЛЬНИКОВ */
 .small-rectangle {
-    width: 750px;
     height: 420px;
-    min-width: 750px;
-    max-width: 750px;
-    min-height: 420px;
-    max-height: 420px;
-    flex: 0 0 auto;
+    width: 750px;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
 }
 
+/* СТИЛИ ДЛЯ ИЗОБРАЖЕНИЙ ВНУТРИ ПРЯМОУГОЛЬНИКОВ */
 .small-rectangle img {
     width: 100%;
     height: 100%;
@@ -1134,24 +1126,23 @@ html, body {
     display: block;
 }
 
-/* Отступы между картинками */
+/* ПЕРВЫЙ ПРЯМОУГОЛЬНИК - ВЫЕЗЖАЕТ ВЛЕВО */
 .rectangle-1 {
-    margin-right: 10px;
-}
-.rectangle-2 {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-.rectangle-3 {
-    margin-left: 10px;
+    justify-self: end;
+    /* Сдвигаем влево за край экрана */
+    transform: translateX(-150px);
 }
 
-/* Выезд за экран */
-.rectangle-1 {
-    margin-left: -150px;
+/* ВТОРОЙ ПРЯМОУГОЛЬНИК - ПО ЦЕНТРУ */
+.rectangle-2 {
+    justify-self: center;
 }
+
+/* ТРЕТИЙ ПРЯМОУГОЛЬНИК - ВЫЕЗЖАЕТ ВПРАВО */
 .rectangle-3 {
-    margin-right: -150px;
+    justify-self: start;
+    /* Сдвигаем вправо за край экрана */
+    transform: translateX(150px);
 }
 .text {
     font-family: 'Gerhaus', 'Rubik', sans-serif;
