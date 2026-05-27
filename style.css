@@ -1088,7 +1088,6 @@ html, body {
     margin-left: -370px;
 }
 
-/* ===== ОСНОВНОЙ ПРЯМОУГОЛЬНИК ===== */
 .main-gray-rectangle {
     display: flex;
     justify-content: center;
@@ -1098,11 +1097,10 @@ html, body {
     margin-top: -60px;
     margin-bottom: 50px;
     overflow-x: clip;
-    gap: 20px; /* ОТСТУП МЕЖДУ ВСЕМИ ТРЕМЯ КАРТИНКАМИ */
 }
 
 .small-rectangle {
-    width: 300px;
+    width: 750px;
     height: 420px;
     flex-shrink: 0;
 }
@@ -1116,11 +1114,20 @@ html, body {
     margin-right: -150px;
 }
 
-.small-rectangle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+/* ОТСТУП МЕЖДУ КАРТИНКАМИ ЧЕРЕЗ margin у второй */
+.rectangle-2 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* А ТЕПЕРЬ ОТСТУП У ТРЕТЬЕЙ КАРТИНКИ ОТ ВТОРОЙ */
+.rectangle-3 {
+    margin-left: 20px;  /* ← ЭТО ДАЁТ ОТСТУП */
+}
+.rectangle-1,
+.rectangle-2,
+.rectangle-3 {
+    width: calc(33.33% - -100px);
 }
 .text {
     font-family: 'Gerhaus', 'Rubik', sans-serif;
