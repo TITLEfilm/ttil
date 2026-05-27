@@ -1113,61 +1113,44 @@ html, body {
     margin-bottom: 50px;
     overflow: visible;
     padding: 0;
-    /* Жесткая фиксация ряда */
-    flex-wrap: nowrap;
+    gap: 0;
 }
 
 .small-rectangle {
     width: 750px;
     height: 420px;
-    flex-shrink: 0;
-    flex-grow: 0;
-    /* Жестко фиксируем позицию */
-    position: relative;
+    min-width: 750px;
+    max-width: 750px;
+    min-height: 420px;
+    max-height: 420px;
+    flex: 0 0 auto;
 }
 
 .small-rectangle img {
-    width: 100%;
-    height: 100%;
+    width: 750px;
+    height: 420px;
     object-fit: cover;
     display: block;
 }
 
-/* Жесткие отступы между картинками */
+/* Отступы */
 .rectangle-1 {
     margin-right: 10px;
-    margin-left: 0;
 }
-
 .rectangle-2 {
     margin-left: 10px;
     margin-right: 10px;
 }
-
 .rectangle-3 {
     margin-left: 10px;
-    margin-right: 0;
 }
 
-/* Жесткий выезд за экран - фиксированными значениями */
+/* Выезд за экран */
 .rectangle-1 {
     margin-left: -150px;
 }
-
 .rectangle-3 {
     margin-right: -150px;
-}
-
-/* Дополнительная жесткая фиксация - запрещаем любые трансформации */
-.main-gray-rectangle,
-.small-rectangle,
-.rectangle-1,
-.rectangle-2,
-.rectangle-3 {
-    transform: none;
-    top: 0;
-    bottom: auto;
-    vertical-align: top;
 }
 .text {
     font-family: 'Gerhaus', 'Rubik', sans-serif;
