@@ -1106,20 +1106,23 @@ html, body {
     height: 420px;
 }
 
-/* Первая картинка */
 .rectangle-1 {
-    left: 20px;  /* Отступ от левого края 20px */
+    left: 0;  /* Без отступа слева */
 }
 
-/* Вторая картинка - по центру */
 .rectangle-2 {
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-/* Третья картинка */
 .rectangle-3 {
-    right: 20px; /* Отступ от правого края 20px */
+    right: 0; /* Без отступа справа */
+}
+
+/* Добавляем отступ между картинками через смещение */
+.rectangle-2 {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .small-rectangle img {
