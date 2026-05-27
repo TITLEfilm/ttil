@@ -1092,7 +1092,6 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;  /* ← отступ МЕЖДУ картинками */
     background-color: rgba(217, 217, 217, 0.1);
     height: 480px;
     margin-top: -60px;
@@ -1101,16 +1100,27 @@ html, body {
 }
 
 .small-rectangle {
-    width: 300px;
+    width: 750px;
     height: 420px;
     flex-shrink: 0;
+}
+
+/* Отступ между всеми картинками */
+.rectangle-1 {
+    margin-right: 10px;
+}
+.rectangle-2 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.rectangle-3 {
+    margin-left: 10px;
 }
 
 /* Выезд за экран */
 .rectangle-1 {
     margin-left: -150px;
 }
-
 .rectangle-3 {
     margin-right: -150px;
 }
