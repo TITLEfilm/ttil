@@ -1101,8 +1101,7 @@ html, body {
 .small-rectangle {
     position: absolute;
     /* ШИРИНА УВЕЛИЧЕНА В 2.5 РАЗА: 300px → 750px */
-    width: 750px;
-    height: 420px;
+
     top: 50%;
     transform: translateY(-50%);
 }
@@ -1127,8 +1126,7 @@ html, body {
 }
 
 .small-rectangle img {
-    width: 750px;
-    height: 420px;
+
     object-fit: cover;
     display: block;
     flex-shrink: 0;
