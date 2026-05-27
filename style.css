@@ -1100,7 +1100,7 @@ html, body {
 
 .small-rectangle {
     position: absolute;
-    width: 300px;
+    width: 500px;
     height: 420px;
     top: 50%;
     transform: translateY(-50%);
