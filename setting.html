@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Кинолента · Шапка и подвал</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Poiret+One&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+        <div class="shapka1">
+            <div class="button">
+                <a href="index.html">TITLE</a>
+            </div>
+        </div>
+        <div class="shapka2">
+            <div class="button">
+                <a href="podborky.html">Подборки</a>
+            </div>
+            <div class="button">
+                <a>Параметры</a>
+            </div>
+            <div class="shapka3">
+                <div class="search-container">
+                    <img src="images/Search.svg" class="search-icon" width="22px" alt="Поиск">
+                    <div class="search-wrapper">
+                        <input type="text" class="search-input" placeholder="Поиск...">
+                    </div>
+                </div>
+            </div>
+            <div class="shapka4">
+                <div class="button2">
+                    <a href="page4.html">
+                    <img  class="iconshapka" src="images/icon profile.svg" width="22px" alt="Профиль">
+                    </a>
+                </div>
+                <div class="button2">
+                    <img class="iconshapka" src="images/icon settings.svg" width="22px" alt="Настройки">
+                </div>
+            </div>
+        </div>
+    </header>
+<div class="content-wrapper2">
+    <div class="main-container2">
+        <!-- КРАСНЫЙ ПРЯМОУГОЛЬНИК -->
+        <div class="red-box2">
+            <span class="red-box-text2">ПАРАМЕТРЫ ФИЛЬМА</span>
+        </div>
+
+        <!-- ДВА ВЕРТИКАЛЬНЫХ КОНТЕЙНЕРА -->
+        <div class="two-columns">
+            <!-- ЛЕВЫЙ КОНТЕЙНЕР: фиолетовый блок + выпадающий список -->
+            <div class="left-container">
+                <div class="purple-box">
+                    <span class="purple-box-text">ХАРАКТЕРИСТИКИ</span>
+                </div>
+                <div class="dropdown-container">
+                    <div class="dropdown-content-always">
+                        <div class="dropdown-columns">
+                            <div class="dropdown-column">
+                                <div class="dropdown-item-wrapper">
+    <input type="checkbox" id="actor" class="dropdown-checkbox">
+    <label for="actor" class="dropdown-item">
+        <span>АКТЕР(Ы)</span>
+        <img src="Картинки/стрелка.png" alt="arrow" class="dropdown-icon">
+    </label>
+    <div class="dropdown-submenu">
+        <div class="sub-item"><span>Том Хэнкс</span></div>
+        <div class="sub-item"><span>Леонардо ДиКаприо</span></div>
+        <div class="sub-item"><span>Скарлетт Йоханссон</span></div>
+        <div class="sub-item"><span>Брэд Питт</span></div>
+        <div class="sub-item"><span>Мерил Стрип</span></div>
+    </div>
+</div>
+
+                                <div class="item-wrapper">
+                                     <input type="checkbox" id="country" class="dropdown-checkbox">
+                            <label for="country" class="dropdown-item">
+                                    <span>СТРАНА</span>
+                                    <img src="Картинки/стрелка.png" alt="arrow" class="dropdown-icon">
+                                    </label>
+                            <div class="dropdown-submenu">
+                                <div class="sub-item"><span>США</span></div>
+                                <div class="sub-item"><span>Великобритания</span></div>
+                                <div class="sub-item"><span>Франция</span></div>
+                                <div class="sub-item"><span>Германия</span></div>
+                                <div class="sub-item"><span>Япония</span></div>
+                                <div class="sub-item"><span>Россия</span></div>
+                            </div>
+                                </div>
+                                <div class="item-wrapper">
+                                     <input type="checkbox" id="year" class="dropdown-checkbox">
+                            <label for="year" class="dropdown-item">
+                                    <span>ГОД СОЗДАНИЯ</span>
+                                    <img src="Картинки/стрелка.png" alt="arrow" class="dropdown-icon">
+                                    </label>
+                            <div class="dropdown-submenu">
+                                <div class="sub-item"><span>2020-2025</span></div>
+                                <div class="sub-item"><span>2010-2019</span></div>
+                                <div class="sub-item"><span>2000-2009</span></div>
+                                <div class="sub-item"><span>1990-1999</span></div>
+                                <div class="sub-item"><span>1980-1989</span></div>
+                                <div class="sub-item"><span>1970 и ранее</span></div>
+                            </div>
+                                </div>
+                                <div class="item-wrapper">
+                                    <input type="checkbox" id="genre" class="dropdown-checkbox">
+                            <label for="genre" class="dropdown-item">
+                                    <span>ЖАНР</span>
+                                    <img src="Картинки/стрелка.png" alt="arrow" class="dropdown-icon">
+                                    </label>
+                            <div class="dropdown-submenu">
+                                <div class="sub-item"><span>Драма</span></div>
+                                <div class="sub-item"><span>Комедия</span></div>
+                                <div class="sub-item"><span>Боевик</span></div>
+                                <div class="sub-item"><span>Триллер</span></div>
+                                <div class="sub-item"><span>Ужасы</span></div>
+                                <div class="sub-item"><span>Фантастика</span></div>
+                                <div class="sub-item"><span>Мелодрама</span></div>
+                                <div class="sub-item"><span>Детектив</span></div>
+                            </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-column">
+                                <div class="item-wrapper">
+                                     <input type="checkbox" id="mood" class="dropdown-checkbox">
+                            <label for="mood" class="dropdown-item">
+                                    <span>НАСТРОЕНИЕ</span>
+                                    <img src="Картинки/стрелка.png" alt="arrow" class="dropdown-icon">
+                                     </label>
+                            <div class="dropdown-submenu">
+                                <div class="sub-item"><span>Весёлое</span></div>
+                                <div class="sub-item"><span>Грустное</span></div>
+                                <div class="sub-item"><span>Напряжённое</span></div>
+                                <div class="sub-item"><span>Задумчивое</span></div>
+                                <div class="sub-item"><span>Вдохновляющее</span></div>
+                                <div class="sub-item"><span>Меланхоличное</span></div>
+                            </div>
+                                </div>
+                                <div class="item-wrapper">
+                                     <input type="checkbox" id="plot" class="dropdown-checkbox">
+                            <label for="plot" class="dropdown-item">
+                                    <span>ОСОБЕННОСТИ СЮЖЕТА</span>
+                                    <img src="Картинки/стрелка.png" alt="arrow" class="dropdown-icon">
+                                      </label>
+                            <div class="dropdown-submenu">
+                                <div class="sub-item"><span>Неожиданный поворот</span></div>
+                                <div class="sub-item"><span>Открытый финал</span></div>
+                                <div class="sub-item"><span>Линейное повествование</span></div>
+                                <div class="sub-item"><span>Флэшбэки</span></div>
+                                <div class="sub-item"><span>Несколько сюжетных линий</span></div>
+                                </div>
+                                </div>
+                                <div class="item-wrapper">
+                                    <input type="checkbox" id="ending" class="dropdown-checkbox">
+                            <label for="ending" class="dropdown-item">
+                                    <span>ФИНАЛ</span>
+                                    <img src="Картинки/стрелка.png" alt="arrow" class="dropdown-icon">
+                                    </label>
+                            <div class="dropdown-submenu">
+                                <div class="sub-item"><span>Счастливый конец</span></div>
+                                <div class="sub-item"><span>Грустный конец</span></div>
+                                <div class="sub-item"><span>Открытый финал</span></div>
+                                <div class="sub-item"><span>Неожиданная развязка</span></div>
+                                <div class="sub-item"><span>Поучительный финал</span></div>
+                            </div>
+                                </div>
+                                <div class="item-wrapper">
+                                    <input type="checkbox" id="goal" class="dropdown-checkbox">
+                            <label for="goal" class="dropdown-item">
+                                    <span>ЦЕЛЬ ПРОСМОТРА</span>
+                                    <img src="Картинки/стрелка.png" alt="arrow" class="dropdown-icon">
+                                     </label>
+                            <div class="dropdown-submenu">
+                                <div class="sub-item"><span>Отдохнуть и расслабиться</span></div>
+                                <div class="sub-item"><span>Получить новые эмоции</span></div>
+                                <div class="sub-item"><span>Провести время с семьёй</span></div>
+                                <div class="sub-item"><span>Посмотреть шедевр</span></div>
+                                <div class="sub-item"><span>Отвлечься от проблем</span></div>
+                                <div class="sub-item"><span>Вдохновиться</span></div>
+                            </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script defer src="click.js"></script>
+                    </div>
+                <div class="button-container">
+                    <div class="white-rectangle">
+                        <span class="button-text">ПОДОБРАТЬ</span>
+                    </div>
+         <div class="purple-box2">
+         <span class="purple-box-text">ОПИСАНИЕ ФИЛЬМА</span>
+        </div>    
+                </div>
+                </div>
+            </div>
+            
+
+            <!-- ПРАВЫЙ КОНТЕЙНЕР: изображения -->
+            <div class="right-container">
+                <div class="image-stack-vertical-portrait">
+                    <div class="image-stack-container-portrait">
+                        <img src="Картинки 2 /1.png" alt="Image 1" class="stack-image-portrait image-portrait-1">
+                        <div class="overlay-on-first">
+                             <span class="overlay-text">НАСТОЯЩИЙ <br>ДЕТЕКТИВ</span>
+                        </div>
+                        <img src="Картинки 2 /2.png" alt="Image 2" class="stack-image-portrait image-portrait-2">
+                        <img src="Картинки 2 /3.png" alt="Image 3" class="stack-image-portrait image-portrait-3">
+                    </div>
+                </div>
+            </div>
+                
+        </div>
+        <div class="two-columns 2">
+            <!-- ЛЕВЫЙ КОНТЕЙНЕР: фиолетовый блок + выпадающий список -->
+            <div class="left-container 2">
+                <a>Название : «Настоящий детектив»<br>
+                   Режисер : Ник Пиццолатто<br>
+                   Год : 2014 - 2024<br>
+                   Актерский состав : Мэттью <br>
+                   МакКонахи, Вуди Харрельсон, <br>
+                   Колин Фаррелл, Ли Ловред<br>
+                </a>
+            </div>
+            <div class="right-container 2">
+                <a>«Настоящий детектив» — это антологический криминальный сериал, созданный Ником Пиццолатто <br>
+                    в котором каждый сезон рассказывает уникальную историю, связанные с расследованием серьезных <br>
+                    преступлений и психологическими портретами героев. Первый сезон, наиболее популярный <br>
+                    и признанный критиками, вышел в 2014 году и включает в себя сюжет о двух детективах, Мартине <br>
+                    Харте (Вуди Харрельсон) и Расте Коуле (Мэттью МакКонахи), которые в 1995 году расследуют серию<br>
+                    жестоких убийств в Луизиане. В течение 17 лет их пути пересекаются снова, раскрывая глубоко<br>
+                    психологические и философские темы.Сериал отличается атмосферным стилем, мрачной атмосферой<br>
+                    и глубоким психологическим наполнением. Это не типичный криминальный детектив с быстрым <br>
+                    развитием событий; здесь важны атмосфера, настроение и размышления о человеческой природе.<br>
+                    В сериале поднимаются темы времени, судьбы, зла и поиска истины, а каждая серия раскрывает <br>
+                    новые грани загадки, погружая зрителя в сложные психологические портреты героев. Готовьтесь <br>
+                    к насыщенному эмоциональному опыту, который заставит задуматься о добром и злом внутри каждого<br>
+                    человека. Постарайтесь настроиться на медленный, но глубокий ритм повествования и насладиться <br>
+                    атмосферой загадочности и поиска истины.Важно помнить, что «Настоящий детектив» — это не только <br>
+                    расследование преступлений, а философская сага о человеческой природе, о борьбе внутри себя <br>
+                    </a>
+            </div>
+        </div>        
+    </div>
+     <script defer src="cards.js"></script>
+</div>
+ <!-- ОСНОВНОЙ ПРЯМОУГОЛЬНИК -->
+        <div class="main-gray-rectangle">
+    
+    <!-- ТРИ МАЛЕНЬКИХ ПРЯМОУГОЛЬНИКА -->
+            <div class="small-rectangle rectangle-1"><img src="Картинки 2 /4.png"></div>
+             <div class="small-rectangle rectangle-2"><img src="Картинки 2 /5.png"></div>
+             <div class="small-rectangle rectangle-3"><img src="Картинки 2 /6.png"></div>
+            </div>
+             <script defer src="cards.js"></script>   
+<div class="content-wrapper2">
+    <div class="main-container2">
+            <span class="text">РАНДОМАЙЗЕР</span>
+                    <div class="white-rectangle2">
+                        <span class="button-text2">ПОДОБРАТЬ</span>
+                    </div>
+
+        <div class="two-columns3">
+            <!-- ЛЕВЫЙ КОНТЕЙНЕР: фиолетовый блок + выпадающий список -->
+            <div class="left-container3">            
+              <div class="image-with-shadows">
+        <!-- ПЕРВАЯ ПОДЛОЖКА (самая нижняя) -->
+        <div class="shadow-layer shadow-1"></div>
+        
+        <!-- ВТОРАЯ ПОДЛОЖКА (средняя) - наложена на первую -->
+        <div class="shadow-layer shadow-2"></div>
+        
+        <!-- ОСНОВНОЕ ИЗОБРАЖЕНИЕ -->
+        <img src="Картинки 2 /10.png"  class="main-image">
+    </div>
+</div>       
+            </div>
+            <div class="right-container3">
+                  <!-- ПЕРВЫЙ ЗЕЛЕНЫЙ БЛОК -->
+                <div class="green-block">
+                     <span class="green-block-text">«ВОСПОМИНАНИЯ ОБ УБИЙСТВЕ»</span>
+            </div>
+            <div class="purple-wrapper">
+<!-- ФИОЛЕТОВЫЙ БЛОК (с отступом слева) -->
+                     <div class="purple-block-left">
+                        <span class="purple-block-text">«Воспоминания об убийстве» — это южнокорейский психологический триллер,<br> 
+                            основанный на реальных событиях, который погружает зрителя в атмосферу<br>  
+                            напряжения, недосказанности и внутренней борьбы. Этот фильм отличается <br> 
+                            особой тонкостью в изображении психологических аспектов и создает уникальную<br> 
+                            ауру неопределенности, вызывающую размышления о природе преступления, <br> 
+                            памяти и восприятия истины. История раскрывается через призму расследования<br> 
+                            серии жестоких преступлений, где каждое новое открытие только усложняет <br> 
+                            общую картину и заставляет зрителя задаваться вопросами о том, что является <br> 
+                            реальностью, а что — субъективным восприятием. В центре внимания — <br> 
+                            человеческая психика, границы морали и поиска справедливости, что делает <br> 
+                            фильм глубоко философским и психологически насыщенным. Ожидайте<br> 
+                            медленного, атмосферного погружения, выразительной актерской игры <br> 
+                            и интересных визуальных образов, которые помогают создать мрачную и <br> 
+                            загадочную атмосферу. Важной особенностью является тонкое исследование <br> 
+                            тем памяти, времени и вины, поэтому рекомендуется смотреть фильм внимательно <br> 
+                            и с полной сосредоточенностью. </span>
+                    </div>
+                    <div class="black-overlay"></div>
+                <!-- ТРИ ПРЯМОУГОЛЬНЫХ ИЗОБРАЖЕНИЯ -->
+                   <div class="images-wrapper">
+    <div class="green-block2">
+        <span class="green-block-text2">ПОХОЖИЕ</span>
+    </div>
+    <div class="images-row">
+        <div class="image-item">
+            <img src="Картинки 2 /7.png" class="rect-image">
+            <div class="gradient-overlay"></div>
+        </div>
+        <div class="image-item">
+            <img src="Картинки 2 /8.png" class="rect-image">
+            <div class="gradient-overlay"></div>
+        </div>
+        <div class="image-item">
+            <img src="Картинки 2 /9.png" class="rect-image">
+            <div class="gradient-overlay"></div>
+        </div>
+    </div>
+</div></div>
+            </div>
+             </div>
+         </div>
+         <script defer src="random.js"></script>
+</div>
+</div>
+<!-- ПОДВАЛ -->
+<footer>
+    <div class="footer-purple-bar"></div>
+    
+    <div class="footer-content-wrapper">
+        <div class="footer-content">
+            <div class="footer-column footer-column-left">
+                <div class="footer-block">
+                    <h3 class="footer-title">Адрес регистрации:</h3>
+                    <p class="footer-text">
+                        ул. Народная, д. 15, корп. 3,<br>
+                        офис 42, г. Санкт-Петербург,<br>
+                        Российская Федерация
+                    </p>
+                </div>
+                
+                <div class="footer-block">
+                    <h3 class="footer-title">Телефон:</h3>
+                    <p class="footer-text">
+                        +73685670987
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-column footer-column-right">
+                <div class="footer-block">
+                    <h3 class="footer-title">Мы, в соцсетях :</h3>
+                    <div class="social-item">
+                        <img src="Картинки 2 /icon4.svg" width="20px" height="20px" alt="instagram" class="social-icon">
+                        <span class="footer-text"> dzen.ru/id/title</span>
+                    </div>
+                    <div class="social-item">
+                        <img src="Картинки 2 /icon3.svg" width="20px" height="20px" alt="telegram" class="social-icon">
+                        <span class="footer-text">vk.com/title_media</span>
+                    </div>
+                    <div class="social-item">
+                        <img src="Картинки/si_Mail.svg" width="20px" height="20px" alt="email" class="social-icon">
+                        <span class="footer-text">order.title@gmail.com</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+    <script defer src="kursor.js"></script>
+</html>

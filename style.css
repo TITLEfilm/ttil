@@ -1,0 +1,2380 @@
+/* ===== ПОДКЛЮЧЕНИЕ ШРИФТА GERHAUS ===== */
+@font-face {
+    font-family: 'Gerhaus';
+    src: url('fonts/Gerhaus-vmMKA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0d0d;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(45, 38, 56);
+    font-size: 1.5vw;
+    font-family: "Rubik", sans-serif;
+    padding-bottom: 4vh;
+    padding-top: 4vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    align-items: center;
+    margin: 0%;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(45, 38, 56);
+    font-size: 1.5vw;
+    font-family: "Rubik", sans-serif;
+    padding-bottom: 4vh;
+    padding-top: 4vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    align-items: center;
+    margin: 0%;
+}
+
+.shapka1 {
+    font-style: thin;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+}
+
+.shapka2 {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    font-weight: 200;
+    color: rgb(255, 255, 255);
+    align-items: center;
+}
+
+.shapka3 {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5vw;
+    font-weight: 200;
+    color: rgb(255, 255, 255);
+    align-items: center;
+}
+
+.button {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-bottom: 0.35vw;
+    padding-top: 0.35vw;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    
+    /* Плавный переход для всех свойств */
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.3s ease,
+                filter 0.3s ease;
+}
+
+
+.button2 {
+    padding-left: 0.6vw;
+    padding-right: 0.6vw;
+    padding-bottom: 0.35vw;
+    padding-top: 0.35vw;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    
+    /* Плавный переход для всех свойств */
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                filter 0.3s ease;
+}
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+    box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* Эффект при наведении на .button2 */
+.button2:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+    box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* Сброс стилей для всех ссылок в шапке */
+.shapka1 .button a,
+.shapka2 .button a {
+    text-decoration: none;  /* Убирает подчёркивание */
+    color: inherit;        /* Наследует цвет от родителя */
+}
+
+/* Для ссылок без href (когда нет атрибута) это не нужно */
+/* ========== АНИМАЦИЯ СТРОКИ ПОИСКА (CSS only) ========== */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    position: relative;
+}
+
+.search-icon {
+    cursor: pointer;
+}
+
+.search-wrapper {
+    overflow: hidden;
+    max-width: 0;
+    opacity: 0;
+    transition: max-width 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 0.3s ease 0.05s;
+}
+
+/* Активация при наведении на контейнер */
+.search-container:hover .search-wrapper {
+    max-width: 200px;
+    opacity: 1;
+}
+
+/* Активация при фокусе на инпуте (для удержания открытым) */
+.search-wrapper:has(.search-input:focus) {
+    max-width: 200px;
+    opacity: 1;
+}
+
+.search-input {
+    background-color: rgba(0, 0, 0, 0.04);
+    box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.35);
+    border: 0px;
+    padding: 6px 11px;
+    color: white;
+    font-family: "Rubik", sans-serif;
+    font-size: 1.4vw;
+    font-weight: 100;
+    outline: none;
+    width: 180px;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    background-color: rgba(0, 0, 0, 0.07);
+    box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.shapka4 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    margin-left: 8vw;
+}
+
+.shapka4 img {
+    cursor: pointer;
+    margin-bottom: calc(-3.2px);
+}
+
+
+/* ===== ОСНОВНОЙ КОНТЕЙНЕР ===== */
+.content-wrapper2 {
+    background-color: #211D20;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.main-container {
+    display: flex;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: flex-start;
+    padding: 0;
+    padding-top: 70px;
+    padding-bottom: 40px;
+    background-color: #211D20;
+}
+
+/* ===== ЛЕВАЯ КОЛОНКА ===== */
+.left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ===== ПРАВАЯ КОЛОНКА ===== */
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ===== КРАСНЫЙ БЛОК ===== */
+.red-box {
+    width: 100%;
+    background-color: #94251E;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    height: 80px;
+    flex-shrink: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.red-box-text {
+    font-family: 'Gerhaus';
+    color: white;
+    font-size: 70px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 0.7;
+    margin: 0;
+    padding: 0;
+    margin-left: -2px;
+    margin-bottom: 1px;
+}
+
+/* ===== ОБЩИЕ БЛОКИ ===== */
+.image-block {
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-block img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text-block p,
+.text-block1 p {
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 0;
+    color: white;
+}
+
+.text-block1 p {
+    margin-bottom: -2.5px;
+}
+
+.vertical-image {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.vertical-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.vertical-image:hover {
+    transform: scale(1.03);
+}
+
+/* Убираем градиент при наведении на карточку */
+.vertical-image:hover::before {
+    opacity: 0;
+}
+
+/* ===== ЗАГОЛОВКИ В ВЕРХНЕМ ПРАВОМ УГЛУ (вертикально, для картинок 7,8,9,10) ===== */
+.image-title {
+    position: absolute;
+    top: -2px;
+    right: -9px;
+    font-family: 'Gerhaus', 'Rubik', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    z-index: 10;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    line-height: 1.2;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+/* ===== ЗАГОЛОВКИ В НИЖНЕМ ЛЕВОМ УГЛУ (горизонтально, для картинок 2,3,4,6) ===== */
+.image-title-bottom {
+    position: absolute;
+    bottom: -8px;
+    left: -2px;
+    font-family: 'Gerhaus', 'Rubik', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    z-index: 10;
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    line-height: 1.2;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    white-space: nowrap;
+}
+
+/* ===== ГРАДИЕНТ СПРАВА НАЛЕВО ДЛЯ КАРТИНОК 7, 8, 9, 10 ===== */
+.gradient-img {
+    position: relative;
+}
+
+.gradient-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.8) 15%,
+        rgba(0, 0, 0, 0.4) 30%,
+        rgba(0, 0, 0, 0) 45%
+    );
+}
+
+/* ===== ГРАДИЕНТ СНИЗУ ВВЕРХ ДЛЯ КАРТИНОК 2, 3, 4, 6 ===== */
+.gradient-bottom {
+    position: relative;
+}
+
+.gradient-bottom::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.8) 15%,
+        rgba(0, 0, 0, 0.4) 30%,
+        rgba(0, 0, 0, 0) 45%
+    );
+}
+
+/* ===== ДВУХКОЛОНОЧНЫЕ СЕКЦИИ ===== */
+.left-column .two-columns {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+    align-items: flex-start;
+}
+
+.left-column .sub-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.left-column .vertical-image {
+    height: 500px;
+}
+
+.left-column .text-block1 {
+    margin-bottom: 90px;
+}
+
+.right-column .two-columns {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+    align-items: flex-start;
+}
+
+.right-column .sub-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-column .vertical-image {
+    height: 500px;
+}
+
+.right-column .sub-column .text-block {
+    margin-bottom: 80px;
+}
+
+/* ===== ПОДВАЛ ===== */
+footer {
+    background-color: #D9D9D9;
+    padding: 50px 2vw 50px 2vw;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    color: #333;
+    border-top: 1px solid #e0e0e0;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 100px;
+    left: 2vw;
+    width: calc(100% - 4vw);
+    height: 20px;
+    background-color: #2D2638;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+}
+
+.footer-column {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column-left {
+    flex: 2;
+    background-color: transparent;
+    justify-content: flex-start;
+}
+
+.footer-column-right {
+    flex: 1;
+    background-color: transparent;
+    justify-content: flex-start;
+}
+
+.footer-block {
+    margin-bottom: 15px;
+}
+
+.footer-block:last-child {
+    margin-bottom: 0;
+}
+
+.footer-column-left .footer-title {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 350;
+    font-size: 1.3vw;
+    margin: 0 0 5px 0;
+    color: #333;
+    margin-bottom: 1px;
+}
+
+.footer-text {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 1.3vw;
+    margin: 0;
+    line-height: 1.4;
+    color: #555;
+}
+
+.footer-column-right .footer-block {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.footer-column-right .footer-title {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 350;
+    font-size: 1.3vw;
+    margin: 0 0 7px 0;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.social-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Иконки изначально серые */
+.social-icon {
+    filter: brightness(0) saturate(100%) invert(35%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%) contrast(85%);
+    transition: all 0.3s ease;
+}
+
+/* Иконка становится #1a1621 и увеличивается при наведении */
+.social-item:hover .social-icon {
+    filter: brightness(0) saturate(100%) invert(8%) sepia(30%) saturate(800%) hue-rotate(250deg) brightness(95%) contrast(95%);
+    transform: scale(1.1);
+}
+
+/* Текст становится #1a1621 и увеличивается при наведении */
+.social-item:hover .footer-text {
+    color: #1a1621;
+    transform: scale(1.05);
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+/* Чтобы текст не съезжал при увеличении */
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+.footer-content-wrapper {
+    margin-top: 100px;
+}
+
+/* ===== КРАСНЫЙ БЛОК ===== */
+.red-box2 {
+    width: calc(100% - 300px);
+    background-color: #94251E;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    height: clamp(80px, 15vw, 320px);
+}
+
+.red-box-text2 {
+    font-family: 'Gerhaus', 'Alegreya SC', serif;
+    color: white;
+    font-size: 70px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 0.7;
+    margin-left: -2px;
+    margin-bottom: 1px;
+}
+
+/* ===== ДВА ВЕРТИКАЛЬНЫХ КОНТЕЙНЕРА ===== */
+.two-columns {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px; /* ОТСТУП 20px МЕЖДУ КОНТЕЙНЕРАМИ */
+    width: 100%;
+}
+
+/* ЛЕВЫЙ КОНТЕЙНЕР - ширина как у фиолетового блока */
+.left-container {
+    width: calc(100% - 600px);
+    flex-shrink: 0;
+}
+
+/* ПРАВЫЙ КОНТЕЙНЕР - подстраивается под остаток */
+.right-container {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ===== ФИОЛЕТОВЫЙ БЛОК ===== */
+.purple-box {
+    width: 100%;
+    background-color: #2D2638;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 66px;
+    flex-shrink: 0;
+}
+.purple-box2 {
+    width: 100%;
+    background-color: #2D2638;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 66px;
+    flex-shrink: 0;
+    margin-top: 180px;}
+
+.purple-box-text {
+    font-family: 'Gerhaus', 'Rubik', sans-serif;
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 0.7;
+    margin-right: -2px;
+}
+
+/* ===== ВЫПАДАЮЩИЙ СПИСОК ===== */
+.dropdown-container {
+    width: 100%;
+    margin-top: 30px;
+    background-color: #211D20;
+    overflow: hidden;
+}
+
+.dropdown-content-always {
+    background-color: #211D20;
+    padding: 0px;
+    padding-top: 30px;
+}
+
+.dropdown-columns {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.dropdown-column {
+    min-width: 375px;
+    flex: 1;
+}
+/* Обёртка для каждого пункта с чекбоксом */
+.dropdown-item-wrapper {
+    margin-bottom: 15px;
+}
+
+.dropdown-item-wrapper:last-child {
+    margin-bottom: 0;
+}
+
+/* Скрываем чекбокс */
+.dropdown-checkbox {
+    display: none;
+}
+
+/* Стиль кликабельного пункта */
+.dropdown-item {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.dropdown-item span {
+    flex: 1;
+    white-space: nowrap;
+}
+
+.dropdown-icon {
+    width: 14px;
+    height: 14px;
+    margin-left: 15px;
+    object-fit: contain;
+    transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+/* Линия под пунктом */
+.dropdown-item::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #2D2638;
+    transition: background-color 0.2s;
+}
+
+/* Hover эффект */
+.dropdown-item:hover {
+    color: #ffffff;
+}
+
+.dropdown-item:hover::after {
+    background-color: #7c5e91;
+}
+
+/* ===== ИЗМЕНЕНИЕ: Убираем изменение подчёркивания при нажатии (active) ===== */
+.dropdown-item:active::after {
+    background-color: #2D2638;
+}
+
+.dropdown-item:active {
+    color: #e0e0e0;
+}
+
+/* ===== ВЫПАДАЮЩЕЕ ПОДМЕНЮ (СКРЫТО ПО УМОЛЧАНИЮ) ===== */
+.dropdown-submenu {
+    margin-left: 20px;
+    margin-top: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    transition: opacity 0.35s ease, 
+                visibility 0.35s ease, 
+                max-height 0.45s cubic-bezier(0.33, 1, 0.68, 1),
+                margin-top 0.25s ease;
+}
+
+/* ===== КОГДА ЧЕКБОКС ВКЛЮЧЁН — ПОКАЗЫВАЕМ ПОДМЕНЮ ===== */
+.dropdown-checkbox:checked + .dropdown-item + .dropdown-submenu,
+.dropdown-checkbox:checked ~ .dropdown-submenu {
+    opacity: 1;
+    visibility: visible;
+    max-height: 500px;
+    margin-top: 12px;
+}
+
+/* Поворот иконки при открытом состоянии */
+.dropdown-checkbox:checked + .dropdown-item .dropdown-icon,
+.dropdown-checkbox:checked ~ .dropdown-item .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+/* Альтернативный селектор для поворота иконки */
+.dropdown-item-wrapper:has(.dropdown-checkbox:checked) .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+/* Стили для элементов подменю */
+.sub-item {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    color: #c0b5c7;
+    padding: 8px 0 8px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-left: 2px solid #362e3b;
+    margin-bottom: 6px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.sub-item span {
+    flex: 1;
+}
+
+.sub-item:hover {
+    color: #f0e2ff;
+    border-left-color: #a07bcb;
+    background: linear-gradient(90deg, #2c242f, transparent);
+    padding-left: 24px;
+}
+
+.sub-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Дополнительный отступ для последнего подменю */
+.dropdown-submenu {
+    margin-bottom: 8px;
+} .dropdown-item-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.dropdown-item-wrapper:last-child {
+    margin-bottom: 0;
+}
+.sub-item.selected {
+    color: #ffffff;
+    background: linear-gradient(90deg, #5a3e6e, #3a2a4a);
+    border-left-color: #c49fff;
+}
+
+.sub-item.selected span {
+    font-weight: 500;
+}
+
+
+/* ===== КАРТИНКИ - КАРУСЕЛЬ (без увеличения при наведении) ===== */
+.image-stack-vertical-portrait {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+    background-color: #211D20;
+}
+
+.image-stack-container-portrait {
+    position: relative;
+    width: 650px;
+    height: 550px;
+}
+
+.stack-image-portrait {
+    position: absolute;
+    object-fit: cover;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+/* Убираем увеличение при наведении */
+.stack-image-portrait:hover {
+    transform: none;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* Начальные позиции */
+.image-portrait-1 {
+    left: 0px;
+    top: 0px;
+    width: 350px;
+    height: 500px;
+    z-index: 3;
+}
+
+.image-portrait-2 {
+    left: 150px;
+    top: 20px;
+    width: 330px;
+    height: 470px;
+    z-index: 2;
+}
+
+.image-portrait-3 {
+    left: 270px;
+    top: 35px;
+    width: 310px;
+    height: 440px;
+    z-index: 1;
+}
+/* ===== ОСНОВНЫЕ КОНТЕЙНЕРЫ ===== */
+.content-wrapper2 {
+    background-color: #211D20;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.main-container2 {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    background-color: #211D20;
+    position: relative;
+
+}
+
+
+html, body {
+    min-height: 100vh;
+    background-color: #211D20;
+    margin: 0;
+    padding: 0;
+}
+
+.white-rectangle {
+    width: 375px;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 40px;
+}
+
+.button-text {
+    font-family: 'Rubik', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #211D20;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Эффект при наведении (опционально) */
+.white-rectangle:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.02);
+}
+/* Квадраты - просто друг за другом в правом контейнере */
+.square-1,
+.square-2 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 99999;
+}
+
+/* Первый квадрат */
+.square-1 {
+    right: 45px;
+    top: 80%;
+    transform: translateY(-50%);
+}
+
+/* Второй квадрат - рядом с первым */
+.square-2 {
+    right: 45px;
+    top: 86%;
+    transform: translateY(-50%);
+}
+/* Прямоугольник на первом изображении */
+.overlay-on-first {
+    position: absolute;
+    bottom: 0;
+    width: 350px;
+    height: 20%;
+    background-color: rgba(63, 63, 63, 0.31);
+    pointer-events: none;
+    z-index: 10;
+    align-items: end;
+    margin-bottom: 50px;
+    transition: opacity 0.3s ease, left 0.4s ease;
+  backdrop-filter: blur(2px);
+-webkit-backdrop-filter: blur(2px);
+}
+
+/* Текст внутри прямоугольника */
+.overlay-text {
+    font-family: 'Gerhaus', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: 1px;
+    pointer-events: none;
+    position: absolute;
+    bottom: -7px;
+    left: 37%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+/* ===== НОВЫЙ КОНТЕЙНЕР ===== */
+.new-container {
+    width: calc(100% - 600px);
+    flex-shrink: 0;
+}
+
+/* Фиолетовый блок в новом контейнере */
+.new-purple-box {
+    margin-top: 0px;
+}
+
+/* ДВЕ КОЛОНКИ ВНУТРИ НОВОГО КОНТЕЙНЕРА */
+.new-two-columns {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    margin-top: 0px;
+}
+
+/* ЛЕВАЯ КОЛОНКА - УЖЕ */
+.new-left-col {
+    width: 30%;
+    flex-shrink: 0;
+}
+
+/* ПРАВАЯ КОЛОНКА - ШИРЕ */
+.new-right-col {
+    width: 70%;
+}
+
+/* Стили для элементов внутри новых колонок */
+.new-left-col .dropdown-item,
+.new-right-col .dropdown-item {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    position: relative;
+    cursor: pointer;
+}
+
+.new-left-col .dropdown-item span,
+.new-right-col .dropdown-item span {
+    flex: 1;
+    white-space: nowrap;
+}
+
+.new-left-col .dropdown-item::after,
+.new-right-col .dropdown-item::after {
+    content: '';
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #2D2638;
+}
+
+/* ===== БЛОК С ДВУМЯ КОЛОНКАМИ ===== */
+.two-columns3  {  /* Экранирование цифры в классе */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0px;
+    width: 100%;
+    margin-top: -50px;
+
+}
+
+.left-container3  {
+    width: 30%;
+    flex-shrink: 0;
+}
+
+.right-container3 {
+    width: 70%;
+    flex-shrink: 0;
+    margin-left: 470px;
+    margin-top: -520px;
+}
+
+/* Остальные стили те же */
+.left-container.\32  a {
+    font-family: 'Rubik', sans-serif;
+    font-size: 24px;
+    color: #e0e0e0;
+     line-height: 1.5;
+     font-weight: bolder;
+    text-decoration: none;
+    display: block;
+}
+
+.right-container.\32  a {
+    font-family: 'Rubik', sans-serif;
+    font-size: 19px;
+    font-weight: lighter;
+    color: #b0b0b0;
+    line-height: 1.5;
+    text-decoration: none;
+    display: block;
+    margin-left: -370px;
+}
+
+/* ===== ОСНОВНОЙ ПРЯМОУГОЛЬНИК #D9D9D9 С ПРОЗРАЧНОСТЬЮ 10% ===== */
+.main-gray-rectangle {
+    width: 100%;
+    background-color: rgba(217, 217, 217, 0.1);
+    display: flex;
+    height: 480px; /* Было 380px */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 60px; /* Было 20px */
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-top: -60px;
+    margin-bottom: 50px;
+}
+
+/* ОБЩИЕ СТИЛИ ДЛЯ МАЛЕНЬКИХ ПРЯМОУГОЛЬНИКОВ */
+.small-rectangle {
+    height: 420px; /* Было 300px */
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+/* СТИЛИ ДЛЯ ИЗОБРАЖЕНИЙ ВНУТРИ ПРЯМОУГОЛЬНИКОВ */
+.small-rectangle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ПЕРВЫЙ ПРЯМОУГОЛЬНИК */
+.rectangle-1 {
+    width: calc(33.33% - -100px);
+}
+
+/* ВТОРОЙ ПРЯМОУГОЛЬНИК - ПО ЦЕНТРУ */
+.rectangle-2 {
+    width: calc(33.33% - -100px);
+}
+
+/* ТРЕТИЙ ПРЯМОУГОЛЬНИК - СИММЕТРИЧНО ПЕРВОМУ */
+.rectangle-3 {
+    width: calc(33.33% - -100px);
+}
+
+.text {
+    font-family: 'Gerhaus', 'Rubik', sans-serif;
+    color:  #94251E;
+    font-size: 85px;
+    font-weight: 700;
+}
+.white-rectangle2{
+    width: 645px;
+    height: 55px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: -65px;
+    margin-bottom: 70px;
+}
+
+.button-text2{
+    font-family: 'Rubik', sans-serif;
+    font-size: 35px;
+    font-weight: 500;
+    color: #211D20;
+    text-align: center;
+    margin-right: 30px;
+}
+
+/* Эффект при наведении (опционально) */
+.white-rectangle2:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.02);
+}
+.two-columns3 {  /* Экранирование цифры в классе */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;}
+.left-container3  {
+    width: 30%;
+    flex-shrink: 0;
+    align-items: flex-start;}
+
+.right-container3  {
+    width: 70%;
+    flex-shrink: 0;
+    margin-right: 40px;
+
+}
+/* ===== ЗЕЛЕНЫЙ БЛОК ===== */
+.green-block {
+    background-color: #B7B681;
+    padding: 0px;
+    width: 72%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.green-block-text {
+    font-family: 'Gerhaus', sans-serif;
+    font-size: 43px;
+    font-weight: 500;
+    color: #000000;
+    display: block;
+}
+/* ===== ФИОЛЕТОВЫЙ БЛОК С ОТСТУПОМ СЛЕВА ===== */
+.purple-wrapper {
+    padding-left: 125px; /* Отступ на родителе */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.purple-block-left {
+    background-color: #2D2638;
+    width: 97%;
+    box-sizing: border-box;
+    padding-bottom: 9%;
+}
+
+ .purple-block-text {
+    font-family: 'Rubik', monospace;
+    font-size: 18px;
+    font-weight: 300; /* 100-300 - тонкий, 400 - normal, 500+ - жирный */
+    color: #FFFFFF;
+    line-height: 1.3;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+}
+
+.green-block-text2 {
+    font-family: 'Gerhaus', sans-serif;
+    font-size: 43px;
+    font-weight: 500;
+    color: #000000;
+    display: block;}
+
+/* РОДИТЕЛЬСКИЙ КОНТЕЙНЕР */
+.images-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* ЗЕЛЕНЫЙ БЛОК - ПРИЖАТ К НИЗУ ИЗОБРАЖЕНИЙ */
+.green-block2 {
+    position: absolute;
+    bottom: 0; /* Прижимаем к низу */
+    left: 0;
+    background-color: #B7B681;
+    padding: 10px 21.6px;
+    width: auto;
+    box-sizing: border-box;
+    margin: 0;
+    z-index: 5;
+    margin-left: -125px;
+}
+
+/* ИЗОБРАЖЕНИЯ  */
+.images-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-left: 60px;
+    margin-top: 0;
+    margin-right: 3%;
+    padding: 0;
+}
+
+.rect-image {
+    width: 230px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+}
+/* Градиент на обёртке, а не на картинке */
+.content-wrapper2 .image-item {
+    position: relative;
+    display: inline-block;
+}
+
+.content-wrapper2 .gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Картинка не должна иметь градиента */
+.content-wrapper2 .rect-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+.images-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.images-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-left: 60px;
+    margin-top: 0;
+    margin-right: 3%;
+    padding: 0;
+}
+
+/* КОНТЕЙНЕР ДЛЯ КАЖДОГО ИЗОБРАЖЕНИЯ */
+.image-item {
+    position: relative;
+    width: 230px;
+    height: 300px;
+    flex-shrink: 0;
+}
+
+.rect-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.purple-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ЛЕВЫЙ КОНТЕЙНЕР */
+.left-container3 {
+    width: 30%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-start; /* Выравнивание по левому краю */
+       width: 30%;
+}
+
+
+.left-container3 {
+    width: 30%;
+    flex: 1;
+}
+
+.right-container3 {
+    width: 70%;
+    flex: 1;
+    margin-right: 40px;
+}
+.two-columns3 {
+    align-items: stretch; /* или center */
+}
+
+body, html {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+/* КОНТЕЙНЕР ДЛЯ ИЗОБРАЖЕНИЯ И ПОДЛОЖЕК */
+.image-with-shadows {
+    position: relative;
+    display: inline-block;
+}
+
+/* ОСНОВНОЕ ИЗОБРАЖЕНИЕ */
+.main-image {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 3;
+}
+
+/* ОБЩИЕ СТИЛИ ДЛЯ ПОДЛОЖЕК */
+.shadow-layer {
+    position: absolute;
+    background-color: rgba(224, 224, 224, 0.05);
+    pointer-events: none;
+}
+
+/* ПЕРВАЯ ПОДЛОЖКА (самая нижняя) - сдвиг вправо */
+.shadow-1 {
+    width: 300px;
+    height: 450px;
+    top: 60px;
+    left: 70px;  /* Было -20px, теперь +20px - сдвиг вправо */
+    z-index: 2;
+}
+
+/* ВТОРАЯ ПОДЛОЖКА (средняя) - сдвиг вправо */
+.shadow-2 {
+    width: 300px;
+    height: 450px;
+    top: 120px;
+    left: 140px;  /* Было -10px, теперь +10px - сдвиг вправо */
+    z-index: 1;
+}
+
+/* ===== ПРИ НАВЕДЕНИИ - ВСЕ СОБИРАЮТСЯ НА ПОЗИЦИИ SHADOW-1 ===== */
+.image-with-shadows:hover .shadow-1 {
+    top: 60px;
+    left: 70px;
+}
+
+.image-with-shadows:hover .main-image {
+    transform: translate(70px, 60px);
+    z-index: 4;
+}
+
+.image-with-shadows:hover .shadow-2 {
+    top: 60px;
+    left: 70px;
+}
+.image-with-shadows:hover .main-image {
+    transform: translate(70px, 60px) !important;
+}
+/* Анимация для основного изображения */
+.content-wrapper2 .main-image,
+.content-wrapper2 .shadow-2 {
+    transition: all 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1);}
+
+
+/* Градиент на трёх изображениях НЕ МЕНЯЕТСЯ */
+.content-wrapper2 .gradient-overlay {
+    /* Ваши стили градиента остаются без изменений */
+    pointer-events: none;
+}
+.content-wrapper2{
+    margin-bottom: 40px;
+}
+/* ===== КАСТОМНЫЙ КУРСОР ===== */
+
+/* Скрываем стандартный курсор */
+body, a, button, input, textarea, [onclick],
+.button, .white-rectangle, .white-rectangle2,
+.dropdown-item, .sub-item, .social-item,
+.rect-image, .image-portrait-1, .image-portrait-2,
+.image-portrait-3, .main-image, .shadow-1, .shadow-2,
+.purple-box2, .search-input, .overlay-text,
+.gradient-overlay, .social-icon,
+.shapka1 .button a, .shapka2 .button a, .shapka4 .button2 img,
+/* Подвал */
+footer a, footer .social-icon, footer .footer-text,
+.social-item, .footer-block,
+*[style*="transition"], *[style*="animation"] {
+    cursor: none !important;
+}
+
+/* Кастомный курсор - ИЗНАЧАЛЬНО СЕРЫЙ */
+.custom-cursor {
+    position: fixed;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    box-shadow: 0 0 4px rgba(0,0,0,0.15);
+    pointer-events: none;
+    z-index: 999999;
+    transform: translate(-50%, -50%);
+    transition: width 0.15s ease, height 0.15s ease, background-color 0.15s ease;
+    will-change: transform;
+}
+
+/* При наведении на объекты с анимацией - СТАНОВИТСЯ ЗЕЛЁНЫМ #B7B681 */
+.custom-cursor.hover {
+    background-color: #B7B681 !important;
+    width: 32px;
+    height: 32px;
+}
+/* ===== ПОЛНОСТЬЮ УБИРАЕМ ВСЕ СТАНДАРТНЫЕ КУРСОРЫ ===== */
+
+*,
+*::before,
+*::after {
+    cursor: none !important;
+}
+
+/* Для полей ввода — оставляем кастомный курсор (без стандартного) */
+input,
+textarea,
+select,
+[contenteditable="true"] {
+    cursor: none !important;
+}
+
+/* ===== ШАПКА (ОСОБОЕ ВНИМАНИЕ) ===== */
+header,
+header *,
+.shapka1,
+.shapka1 *,
+.shapka2,
+.shapka2 *,
+.shapka3,
+.shapka3 *,
+.shapka4,
+.shapka4 *,
+.button,
+.button a,
+.button2,
+.button2 img,
+.iconshapka,
+.search-container,
+.search-icon,
+.search-input,
+.search-wrapper {
+    cursor: none !important;
+}
+
+/* Дополнительная страховка для всех интерактивных элементов */
+a,
+button,
+[onclick],
+[role="button"],
+.button,
+.white-rectangle,
+.white-rectangle2,
+.dropdown-item,
+.sub-item,
+.social-item,
+.rect-image,
+.image-portrait-1,
+.image-portrait-2,
+.image-portrait-3,
+.main-image,
+.shadow-1,
+.shadow-2,
+.purple-box2,
+.search-input,
+.overlay-text,
+.gradient-overlay,
+.social-icon,
+.shapka1 .button a,
+.shapka2 .button a,
+.shapka4 .button2 img,
+footer a,
+footer .social-icon,
+footer .footer-text,
+.social-item,
+.footer-block,
+label,
+[type="button"],
+[type="submit"],
+[type="reset"] {
+    cursor: none !important;
+}
+/* ===== АДАПТИВНОСТЬ (пропорциональное уменьшение + перенос блоков вниз) ===== */
+
+/* Основные контейнеры и отступы */
+header {
+    font-size: clamp(12px, 1.5vw, 24px);
+    padding-bottom: clamp(20px, 4vh, 40px);
+    padding-top: clamp(20px, 4vh, 40px);
+    padding-left: clamp(10px, 2vw, 30px);
+    padding-right: clamp(10px, 2vw, 30px);
+}
+
+.shapka2 {
+    gap: clamp(10px, 2vw, 30px);
+}
+
+.shapka3 {
+    gap: clamp(5px, 0.5vw, 10px);
+}
+
+.shapka4 {
+    gap: clamp(10px, 2vw, 30px);
+    margin-left: clamp(20px, 8vw, 120px);
+}
+
+/* Кнопки */
+.button, .button2 {
+    padding-left: clamp(5px, 1vw, 15px);
+    padding-right: clamp(5px, 1vw, 15px);
+    padding-bottom: clamp(3px, 0.35vw, 6px);
+    padding-top: clamp(3px, 0.35vw, 6px);
+}
+
+/* Поиск */
+.search-input {
+    font-size: clamp(10px, 1.4vw, 22px);
+    width: clamp(100px, 180px, 200px);
+}
+
+/* Основные контейнеры */
+.content-wrapper2 {
+    padding-left: clamp(10px, 2vw, 30px);
+    padding-right: clamp(10px, 2vw, 30px);
+}
+
+.main-container {
+    gap: clamp(10px, 20px, 30px);
+    padding-top: clamp(30px, 70px, 100px);
+    padding-bottom: clamp(20px, 40px, 60px);
+    flex-wrap: wrap;
+}
+
+/* При маленьком экране колонки становятся друг под другом */
+@media (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+    }
+    .left-column, .right-column {
+        width: 100%;
+    }
+}
+
+.left-column, .right-column {
+    gap: clamp(10px, 20px, 30px);
+}
+
+/* Красный блок */
+.red-box {
+    height: clamp(40px, 80px, 120px);
+}
+
+.red-box-text {
+    font-size: clamp(24px, 70px, 100px);
+    margin-left: clamp(-5px, -2px, 0px);
+}
+
+.red-box2 {
+    width: calc(100% - clamp(50px, 300px, 400px));
+    height: clamp(40px, 15vw, 320px);
+}
+
+.red-box-text2 {
+    font-size: clamp(24px, 70px, 100px);
+}
+
+/* Текст */
+.text-block p, .text-block1 p {
+    font-size: clamp(10px, 14px, 18px);
+}
+
+/* Вертикальные изображения */
+.left-column .vertical-image,
+.right-column .vertical-image {
+    height: clamp(200px, 500px, 700px);
+}
+
+.left-column .text-block1 {
+    margin-bottom: clamp(20px, 90px, 120px);
+}
+
+.right-column .sub-column .text-block {
+    margin-bottom: clamp(20px, 80px, 120px);
+}
+
+.left-column .sub-column {
+    gap: clamp(8px, 15px, 25px);
+}
+
+.right-column .sub-column {
+    gap: clamp(10px, 20px, 30px);
+}
+
+.left-column .two-columns,
+.right-column .two-columns {
+    gap: clamp(8px, 15px, 25px);
+}
+
+/* Заголовки на изображениях */
+.image-title, .image-title-bottom {
+    font-size: clamp(14px, 35px, 50px);
+    right: clamp(-15px, -9px, -5px);
+    top: clamp(-5px, -2px, 0px);
+    bottom: clamp(-15px, -8px, -5px);
+    left: clamp(-5px, -2px, 0px);
+}
+
+/* Подвал */
+footer {
+    padding: clamp(20px, 50px, 80px) clamp(10px, 2vw, 30px);
+}
+
+footer::before {
+    top: clamp(40px, 100px, 150px);
+    left: clamp(10px, 2vw, 30px);
+    width: calc(100% - clamp(20px, 4vw, 60px));
+    height: clamp(10px, 20px, 30px);
+}
+
+.footer-content {
+    gap: clamp(15px, 40px, 60px);
+}
+
+.footer-column-left .footer-title,
+.footer-column-right .footer-title,
+.footer-text {
+    font-size: clamp(10px, 1.3vw, 20px);
+}
+
+.footer-column-right .footer-title {
+    margin-bottom: clamp(10px, 20px, 30px);
+}
+
+.social-item {
+    gap: clamp(8px, 15px, 25px);
+    margin-bottom: clamp(12px, 22px, 35px);
+}
+
+.footer-content-wrapper {
+    margin-top: clamp(30px, 100px, 150px);
+}
+
+/* Два вертикальных контейнера */
+.two-columns {
+    gap: clamp(10px, 20px, 30px);
+    flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+    .two-columns {
+        flex-direction: column;
+    }
+}
+
+.left-container {
+    width: calc(100% - clamp(200px, 600px, 800px));
+}
+
+@media (max-width: 900px) {
+    .left-container {
+        width: 100%;
+    }
+}
+
+/* Фиолетовые блоки */
+.purple-box, .purple-box2 {
+    height: clamp(30px, 66px, 90px);
+}
+
+.purple-box-text {
+    font-size: clamp(16px, 40px, 60px);
+}
+
+/* purple-box2 - НЕ МЕНЯЕТ РАЗМЕР, просто уходит вниз */
+.purple-box2 {
+    margin-top: 180px;
+}
+
+@media (max-width: 1000px) {
+    .purple-box2 {
+        margin-top: 180px;
+        position: relative;
+        clear: both;
+    }
+}
+
+@media (max-width: 768px) {
+    .purple-box2 {
+        margin-top: 180px;
+        margin-bottom: 40px;
+    }
+}
+
+/* Выпадающий список */
+.dropdown-container {
+    margin-top: clamp(15px, 30px, 50px);
+}
+
+.dropdown-content-always {
+    padding-top: clamp(15px, 30px, 50px);
+}
+
+.dropdown-columns {
+    gap: clamp(15px, 30px, 50px);
+    flex-wrap: wrap;
+}
+
+.dropdown-column {
+    min-width: clamp(160px, 375px, 500px);
+}
+
+.dropdown-item {
+    font-size: clamp(12px, 18px, 24px);
+}
+
+.dropdown-icon {
+    width: clamp(8px, 14px, 20px);
+    height: clamp(8px, 14px, 20px);
+    margin-left: clamp(8px, 15px, 25px);
+}
+
+.dropdown-item::after {
+    bottom: clamp(-12px, -8px, -5px);
+    height: clamp(2px, 4px, 6px);
+}
+
+.dropdown-submenu {
+    margin-left: clamp(10px, 20px, 30px);
+}
+
+.sub-item {
+    font-size: clamp(11px, 16px, 20px);
+    padding: clamp(4px, 8px, 12px) 0 clamp(4px, 8px, 12px) clamp(10px, 20px, 30px);
+}
+
+.sub-item:hover {
+    padding-left: clamp(12px, 24px, 36px);
+}
+
+/* Карусель изображений */
+.image-stack-container-portrait {
+    width: clamp(280px, 650px, 900px);
+    height: clamp(240px, 550px, 760px);
+}
+
+.image-portrait-1 {
+    left: clamp(0px, 0px, 0px);
+    top: clamp(0px, 0px, 0px);
+    width: clamp(150px, 350px, 500px);
+    height: clamp(210px, 500px, 710px);
+}
+
+.image-portrait-2 {
+    left: clamp(50px, 150px, 200px);
+    top: clamp(8px, 20px, 30px);
+    width: clamp(140px, 330px, 470px);
+    height: clamp(200px, 470px, 670px);
+}
+
+.image-portrait-3 {
+    left: clamp(100px, 270px, 360px);
+    top: clamp(15px, 35px, 50px);
+    width: clamp(130px, 310px, 440px);
+    height: clamp(185px, 440px, 630px);
+}
+
+/* Главный контейнер 2 */
+.main-container2 {
+    gap: clamp(30px, 70px, 100px);
+    padding-top: clamp(30px, 70px, 100px);
+    padding-bottom: clamp(20px, 50px, 80px);
+}
+
+/* Белые прямоугольники */
+.white-rectangle {
+    width: clamp(200px, 375px, 500px);
+    height: clamp(30px, 50px, 70px);
+    margin-top: clamp(20px, 40px, 60px);
+}
+
+.button-text {
+    font-size: clamp(14px, 22px, 30px);
+}
+
+.button-text2 {
+    font-size: clamp(18px, 35px, 50px);
+    margin-right: clamp(10px, 30px, 50px);
+}
+
+/* Квадраты */
+.square-1, .square-2 {
+    width: clamp(25px, 50px, 70px);
+    height: clamp(25px, 50px, 70px);
+    right: clamp(15px, 45px, 60px);
+}
+
+.square-1 {
+    top: clamp(75%, 80%, 85%);
+}
+
+.square-2 {
+    top: clamp(82%, 86%, 90%);
+}
+
+/* Оверлей на первом изображении */
+.overlay-on-first {
+    width: clamp(150px, 350px, 500px);
+    height: clamp(15%, 20%, 25%);
+    margin-bottom: clamp(20px, 50px, 70px);
+}
+
+.overlay-text {
+    font-size: clamp(18px, 40px, 60px);
+    bottom: clamp(-10px, -7px, -5px);
+    left: clamp(35%, 37%, 40%);
+}
+
+/* Новый контейнер */
+.new-container {
+    width: calc(100% - clamp(200px, 600px, 800px));
+}
+
+@media (max-width: 900px) {
+    .new-container {
+        width: 100%;
+    }
+}
+
+.new-two-columns {
+    gap: clamp(10px, 20px, 30px);
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .new-two-columns {
+        flex-direction: column;
+    }
+}
+
+.new-left-col {
+    width: clamp(25%, 30%, 35%);
+}
+
+.new-right-col {
+    width: clamp(65%, 70%, 75%);
+}
+
+@media (max-width: 768px) {
+    .new-left-col, .new-right-col {
+        width: 100%;
+    }
+}
+
+.new-left-col .dropdown-item,
+.new-right-col .dropdown-item {
+    font-size: clamp(12px, 18px, 24px);
+    margin-bottom: clamp(8px, 15px, 25px);
+}
+
+.new-left-col .dropdown-item::after,
+.new-right-col .dropdown-item::after {
+    bottom: clamp(0px, 1px, 2px);
+    height: clamp(2px, 4px, 6px);
+}
+
+/* Две колонки 3 - ПРИ УМЕНЬШЕНИИ right-container3 УХОДИТ ВНИЗ */
+.two-columns3 {
+    gap: 0px;
+    margin-top: -50px;
+    flex-wrap: wrap;
+}
+
+.left-container3 {
+    width: 30%;
+    flex-shrink: 0;
+}
+
+.right-container3 {
+    width: 70%;
+    flex-shrink: 0;
+    margin-left: 470px;
+    margin-top: -520px;
+    margin-right: 40px;
+}
+
+/* При экране меньше 1100px right-container3 уходит вниз */
+@media (max-width: 1100px) {
+    .two-columns3 {
+        flex-direction: column;
+        margin-top: 0;
+        gap: 40px;
+    }
+    
+    .left-container3 {
+        width: 100%;
+    }
+    
+    .right-container3 {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+        margin-right: 0;
+    }
+}
+
+.left-container.\32 a {
+    font-size: clamp(14px, 24px, 32px);
+}
+
+.right-container.\32 a {
+    font-size: clamp(12px, 19px, 26px);
+    margin-left: -370px;
+}
+
+@media (max-width: 1100px) {
+    .right-container.\32 a {
+        margin-left: 0;
+    }
+}
+
+/* Серый прямоугольник с картинками */
+.main-gray-rectangle {
+    height: clamp(250px, 480px, 650px);
+    gap: clamp(15px, 60px, 90px);
+    padding: clamp(15px, 30px, 45px);
+    margin-top: clamp(-100px, -60px, -40px);
+    margin-bottom: clamp(20px, 50px, 80px);
+    flex-wrap: wrap;
+}
+
+@media (max-width: 800px) {
+    .main-gray-rectangle {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+.small-rectangle {
+    height: clamp(200px, 420px, 580px);
+}
+
+.rectangle-1,
+.rectangle-2,
+.rectangle-3 {
+    width: calc(33.33% - -100px);
+}
+
+@media (max-width: 800px) {
+    .rectangle-1,
+    .rectangle-2,
+    .rectangle-3 {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* Текст */
+.text {
+    font-size: clamp(30px, 85px, 120px);
+}
+
+.white-rectangle2 {
+    width: clamp(300px, 645px, 850px);
+    height: clamp(30px, 55px, 75px);
+    margin-top: clamp(-90px, -65px, -40px);
+    margin-bottom: clamp(30px, 70px, 100px);
+}
+
+/* Зеленые блоки */
+.green-block {
+    width: clamp(50%, 72%, 85%);
+}
+
+.green-block-text,
+.green-block-text2 {
+    font-size: clamp(20px, 43px, 60px);
+}
+
+/* Фиолетовый блок с отступом */
+.purple-wrapper {
+    padding-left: clamp(30px, 125px, 180px);
+}
+
+.purple-block-left {
+    width: clamp(90%, 97%, 100%);
+    padding-bottom: clamp(3%, 9%, 12%);
+}
+
+.purple-block-text {
+    font-size: clamp(12px, 18px, 24px);
+    padding: clamp(3px, 5px, 8px);
+}
+
+/* Изображения с градиентом - НЕ МЕНЯЮТ РАЗМЕР, просто уходят вниз */
+.images-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-left: 60px;
+    margin-top: 0;
+    margin-right: 3%;
+    padding: 0;
+    gap: 0;
+}
+
+/* При экране меньше 1000px images-row уходит вниз и выстраивается вертикально */
+@media (max-width: 1000px) {
+    .images-row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+        margin-right: 0;
+        gap: 20px;
+    }
+}
+
+.image-item {
+    position: relative;
+    width: 230px;
+    height: 300px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1000px) {
+    .image-item {
+        width: 230px;
+        height: 300px;
+    }
+}
+
+.rect-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.green-block2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #B7B681;
+    padding: 10px 21.6px;
+    width: auto;
+    box-sizing: border-box;
+    margin: 0;
+    z-index: 5;
+    margin-left: -125px;
+}
+
+@media (max-width: 1000px) {
+    .green-block2 {
+        position: relative;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    
+    .images-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Изображение с подложками */
+.main-image {
+    width: clamp(180px, 300px, 400px);
+    height: clamp(270px, 450px, 600px);
+}
+
+.shadow-1, .shadow-2 {
+    width: clamp(180px, 300px, 400px);
+    height: clamp(270px, 450px, 600px);
+}
+
+.shadow-1 {
+    top: clamp(30px, 60px, 80px);
+    left: clamp(30px, 70px, 100px);
+}
+
+.shadow-2 {
+    top: clamp(60px, 120px, 160px);
+    left: clamp(60px, 140px, 180px);
+}
+
+.image-with-shadows:hover .shadow-1,
+.image-with-shadows:hover .shadow-2 {
+    top: clamp(30px, 60px, 80px);
+    left: clamp(30px, 70px, 100px);
+}
+
+.image-with-shadows:hover .main-image {
+    transform: translate(clamp(30px, 70px, 100px), clamp(30px, 60px, 80px));
+}
+
+.content-wrapper2 {
+    margin-bottom: clamp(20px, 40px, 60px);
+}
+
+/* Кастомный курсор */
+.custom-cursor {
+    width: clamp(20px, 24px, 32px);
+    height: clamp(20px, 24px, 32px);
+}
+
+.custom-cursor.hover {
+    width: clamp(26px, 32px, 42px);
+    height: clamp(26px, 32px, 42px);
+}
+
+/* Общие переносы блоков при маленьком экране */
+@media (max-width: 1000px) {
+    .two-columns3 {
+        flex-direction: column;
+    }
+    
+    .left-container3 {
+        width: 100%;
+    }
+    
+    .right-container3 {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .two-columns {
+        flex-direction: column;
+    }
+    
+    .left-container {
+        width: 100%;
+    }
+}
+/* Адаптация для .text */
+@media (max-width: 1200px) {
+    .text {
+        font-size: 65px;
+    }
+}
+
+@media (max-width: 992px) {
+    .text {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .text {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    .text {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 400px) {
+    .text {
+        font-size: 18px;
+    }
+}
+/* Адаптация для .white-rectangle2 */
+@media (max-width: 1200px) {
+    .white-rectangle2 {
+        width: 500px;
+        height: 48px;
+        margin-top: -55px;
+        margin-bottom: 55px;
+    }
+    .button-text2 {
+        font-size: 28px;
+        margin-right: 25px;
+    }
+}
+
+@media (max-width: 992px) {
+    .white-rectangle2 {
+        width: 400px;
+        height: 42px;
+        margin-top: -45px;
+        margin-bottom: 45px;
+    }
+    .button-text2 {
+        font-size: 22px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .white-rectangle2 {
+        width: 320px;
+        height: 38px;
+        margin-top: -35px;
+        margin-bottom: 35px;
+    }
+    .button-text2 {
+        font-size: 18px;
+        margin-right: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .white-rectangle2 {
+        width: 250px;
+        height: 35px;
+        margin-top: -25px;
+        margin-bottom: 25px;
+    }
+    .button-text2 {
+        font-size: 16px;
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .white-rectangle2 {
+        width: 200px;
+        height: 32px;
+        margin-top: -20px;
+        margin-bottom: 20px;
+    }
+    .button-text2 {
+        font-size: 13px;
+        margin-right: 12px;
+    }
+}
+/* Адаптация для .red-box2 */
+@media (max-width: 1200px) {
+    .red-box2 {
+        width: calc(100% - 200px);
+        height: clamp(70px, 14vw, 280px);
+    }
+    .red-box-text2 {
+        font-size: 55px;
+    }
+}
+
+@media (max-width: 992px) {
+    .red-box2 {
+        width: calc(100% - 150px);
+        height: clamp(60px, 13vw, 240px);
+    }
+    .red-box-text2 {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 768px) {
+    .red-box2 {
+        width: calc(100% - 100px);
+        height: clamp(50px, 12vw, 200px);
+    }
+    .red-box-text2 {
+        font-size: 35px;
+        margin-left: -1px;
+    }
+}
+
+@media (max-width: 576px) {
+    .red-box2 {
+        width: calc(100% - 60px);
+        height: clamp(40px, 11vw, 160px);
+    }
+    .red-box-text2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 400px) {
+    .red-box2 {
+        width: calc(100% - 30px);
+        height: clamp(30px, 10vw, 120px);
+    }
+    .red-box-text2 {
+        font-size: 22px;
+    }
+}
+
+/* Дополнительно для очень маленьких экранов */
+@media (max-width: 350px) {
+    .red-box2 {
+        width: calc(100% - 20px);
+    }
+    .red-box-text2 {
+        font-size: 18px;
+    }
+    .white-rectangle2 {
+        width: 170px;
+        height: 28px;
+    }
+    .button-text2 {
+        font-size: 11px;
+        margin-right: 10px;
+    }
+    .text {
+        font-size: 14px;
+    }
+}
