@@ -1096,8 +1096,7 @@ html, body {
 
 .main-gray-rectangle {
     display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+   
     gap: 20px !important;
     background-color: rgba(217, 217, 217, 0.1) !important;
     width: 100% !important;
