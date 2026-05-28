@@ -1098,25 +1098,24 @@ html, body {
     display: flex !important;
    justify-content: space-between !important;
     align-items: center !important;
-    gap: 0px !important;
+    gap: 20px !important;
     background-color: rgba(217, 217, 217, 0.1) !important;
     width: 100% !important;
     height: auto !important;
     min-height: 350px !important;
     position: relative !important;
     margin: 20px 0 !important;
-    padding-top: 20px !important;
-    padding-bottom: 20px;
+    padding: 20px !important;
     flex-wrap: wrap !important;
     overflow-x: clip !important; 
 }
 .rectangle-1 {
-    margin-left: -50px !important;
+    margin-left: -10px !important;
 }
 
 /* ТРЕТЬЯ КАРТИНКА — ВЫЕЗЖАЕТ ВПРАВО И ОБРЕЗАЕТСЯ */
 .rectangle-3 {
-    margin-right: -50px !important;
+    margin-right: -10px !important;
 }
 .small-rectangle {
     flex-shrink: 0 !important;
