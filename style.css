@@ -278,125 +278,49 @@ header {
 .text-block1 p {
     margin-bottom: -2.5px;
 }
-
-
-/* ===== ОБЩИЕ СТИЛИ ДЛЯ КАРТОЧЕК ===== */
 .vertical-image {
     position: relative;
     overflow: hidden;
-    width: 100%;
 }
 
 .vertical-image img {
     width: 100%;
     display: block;
-    object-fit: cover;
-    transition: transform 0.3s ease;
 }
 
-/* ЭФФЕКТ ПРИ НАВЕДЕНИИ */
-.vertical-image:hover img {
-    transform: scale(1.03);
-}
-
-/* ===== ВЕРТИКАЛЬНЫЕ ЗАГОЛОВКИ СПРАВА СВЕРХУ ===== */
-/* для картинок 7,8,9,10 */
-
-.image-title {
-    position: absolute;
-
-    top: 10px;
-    right: 10px;
-
-    font-family: 'Gerhaus', 'Rubik', sans-serif;
-    font-size: 35px;
-    font-weight: 700;
-
-    color: white;
-
-    z-index: 10;
-
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-
-    margin: 0;
-    padding: 0;
-}
-.image-title,
-.image-title-bottom {
-    z-index: 2;
-}
-
-/* ===== ГОРИЗОНТАЛЬНЫЕ ЗАГОЛОВКИ СЛЕВА СНИЗУ ===== */
-/* для картинок 2,3,4,6 */
+/* НИЖНИЙ ТЕКСТ */
 
 .image-title-bottom {
     position: absolute;
 
     left: 15px;
-    bottom: 0px;
+    bottom: 15px;
 
-    font-family: 'Gerhaus', 'Rubik', sans-serif;
+    color: white;
     font-size: 35px;
     font-weight: 700;
 
-    color: white;
-
-    z-index: 10;
-
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-
-    margin: 0;
-    padding: 0;
-}
-/* ===== ГРАДИЕНТ СПРАВА НАЛЕВО ===== */
-
-.gradient-img {
-    position: relative;
+    z-index: 5;
 }
 
-.gradient-img::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-
-    background: linear-gradient(
-        to left,
-        rgba(0,0,0,1) 0%,
-        rgba(0,0,0,0.8) 15%,
-        rgba(0,0,0,0.4) 30%,
-        rgba(0,0,0,0) 45%
-    );
-
-    z-index: 1;
-    pointer-events: none;
-}
-
-/* ===== ГРАДИЕНТ СНИЗУ ===== */
-
-.gradient-bottom {
-    position: relative;
-}
+/* ГРАДИЕНТ */
 
 .gradient-bottom::before {
-    content: '';
+    content: "";
+
     position: absolute;
     inset: 0;
 
     background: linear-gradient(
         to top,
-        rgba(0,0,0,1) 0%,
-        rgba(0,0,0,0.8) 20%,
-        rgba(0,0,0,0.4) 40%,
+        rgba(0,0,0,0.9) 0%,
+        rgba(0,0,0,0.5) 30%,
         rgba(0,0,0,0) 60%
     );
 
     z-index: 1;
     pointer-events: none;
 }
-
 
 /* ===== ДВУХКОЛОНОЧНЫЕ СЕКЦИИ ===== */
 .left-column .two-columns {
