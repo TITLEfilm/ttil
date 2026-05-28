@@ -2378,3 +2378,22 @@ footer::before {
     padding-top: 0;
     border-top: none;
 }
+/* ЖЁСТКО ЧИНИМ СЕРЫЙ КОНТЕЙНЕР */
+.main-gray-rectangle {
+    height: 420px !important;
+    min-height: 420px !important;
+    max-height: 420px !important;
+    overflow: hidden !important;     /* скрывает всё, что вылезает */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: nowrap !important;
+}
+
+/* Картинки не вылезают из контейнера */
+.small-rectangle {
+    max-width: 350px !important;
+    max-height: 420px !important;
+    flex-shrink: 0 !important;
+    height: auto !important;
+}
