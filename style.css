@@ -2368,4 +2368,9 @@ footer::before {
 /* Отодвигаем третью картинку принудительно */
 .rectangle-3 {
     margin-left: 20px !important;
+}.main-gray-rectangle {
+    height: 420px !important;   /* жёсткая высота */
+    max-height: 420px !important;
+    overflow-y: visible;        /* не прячем ничего по вертикали */
+    align-items: center;        /* вертикальное центрирование */
 }
