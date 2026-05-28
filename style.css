@@ -278,48 +278,131 @@ header {
 .text-block1 p {
     margin-bottom: -2.5px;
 }
+
 .vertical-image {
-    position: relative;
+    width: 100%;
     overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
 }
 
 .vertical-image img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
+.vertical-image:hover {
+    transform: scale(1.03);
+}
 
-/* НИЖНИЙ ТЕКСТ */
+/* Убираем градиент при наведении на карточку */
+.vertical-image:hover::before {
+    opacity: 0;
+}
 
+/* ===== ЗАГОЛОВКИ В ВЕРХНЕМ ПРАВОМ УГЛУ (вертикально, для картинок 7,8,9,10) ===== */
+.image-title {
+    position: absolute;
+    top: -2px;
+    right: -9px;
+    font-family: 'Gerhaus', 'Rubik', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    z-index: 10;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    line-height: 1.2;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+/* ===== ЗАГОЛОВКИ В НИЖНЕМ ЛЕВОМ УГЛУ (горизонтально, для картинок 2,3,4,6) ===== */
 .image-title-bottom {
     position: absolute;
 
     left: 15px;
     bottom: 15px;
 
-    color: white;
+    font-family: 'Gerhaus', sans-serif;
     font-size: 35px;
     font-weight: 700;
 
-    z-index: 5;
+    color: white;
+    z-index: 10;
+
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+
+    writing-mode: initial;
+    text-orientation: initial;
+
+    transform: none;
+}
+.vertical-image {
+    position: relative;
+    width: 100%;
+    height: 500px; /* или нужная тебе высота */
+    overflow: hidden;
+}
+.vertical-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.image-title-bottom {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+/* ===== ГРАДИЕНТ СПРАВА НАЛЕВО ДЛЯ КАРТИНОК 7, 8, 9, 10 ===== */
+.gradient-img {
+    position: relative;
 }
 
-/* ГРАДИЕНТ */
+.gradient-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.8) 15%,
+        rgba(0, 0, 0, 0.4) 30%,
+        rgba(0, 0, 0, 0) 45%
+    );
+}
+
+/* ===== ГРАДИЕНТ СНИЗУ ВВЕРХ ДЛЯ КАРТИНОК 2, 3, 4, 6 ===== */
+.gradient-bottom {
+    position: relative;
+}
 
 .gradient-bottom::before {
-    content: "";
-
+    content: '';
     position: absolute;
-    inset: 0;
-
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
     background: linear-gradient(
         to top,
-        rgba(0,0,0,0.9) 0%,
-        rgba(0,0,0,0.5) 30%,
-        rgba(0,0,0,0) 60%
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.8) 15%,
+        rgba(0, 0, 0, 0.4) 30%,
+        rgba(0, 0, 0, 0) 45%
     );
-
-    z-index: 1;
-    pointer-events: none;
 }
 
 /* ===== ДВУХКОЛОНОЧНЫЕ СЕКЦИИ ===== */
