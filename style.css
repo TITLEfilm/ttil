@@ -291,7 +291,6 @@ header {
     height: 100%;
     object-fit: cover;
     display: block;
-    position: relative;  /* ← ДОБАВЬ ЭТО */
 }
 .vertical-image:hover {
     transform: scale(1.03);
@@ -321,7 +320,9 @@ header {
     padding: 0;
     border-radius: 0;
 }
-
+.vertical-image {
+    position: relative;
+}
 /* ===== ЗАГОЛОВКИ В НИЖНЕМ ЛЕВОМ УГЛУ (горизонтально, для картинок 2,3,4,6) ===== */
 .image-title-bottom {
     position: absolute;
