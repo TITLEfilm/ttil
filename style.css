@@ -2397,3 +2397,48 @@ footer::before {
     flex-shrink: 0 !important;
     height: auto !important;
 }
+/* ===== ЖЁСТКОЕ ИСПРАВЛЕНИЕ СЕРОГО КОНТЕЙНЕРА ===== */
+.main-gray-rectangle {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    background-color: rgba(217, 217, 217, 0.1) !important;
+    height: 420px !important;
+    min-height: 420px !important;
+    max-height: 420px !important;
+    width: 100% !important;
+    margin-top: -60px !important;
+    margin-bottom: 50px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    flex-wrap: nowrap !important;
+    gap: 20px !important;
+}
+
+/* Все три картинки */
+.main-gray-rectangle .small-rectangle {
+    width: 300px !important;
+    height: 420px !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Картинки внутри */
+.main-gray-rectangle .small-rectangle img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+/* Выезд первой влево */
+.main-gray-rectangle .rectangle-1 {
+    margin-left: -100px !important;
+}
+
+/* Выезд третьей вправо */
+.main-gray-rectangle .rectangle-3 {
+    margin-right: -100px !important;
+}
