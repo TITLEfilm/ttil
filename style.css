@@ -2373,4 +2373,8 @@ footer::before {
     max-height: 420px !important;
     overflow-y: visible;        /* не прячем ничего по вертикали */
     align-items: center;        /* вертикальное центрирование */
+}.main-gray-rectangle {
+    margin-top: -60px;
+    padding-top: 0;
+    border-top: none;
 }
