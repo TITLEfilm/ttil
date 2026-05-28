@@ -1112,8 +1112,8 @@ html, body {
 }
 
 .small-rectangle {
-    width: 280px !important;
-    height: 400px !important;
+    width: 500px !important;
+    height: 460px !important;
     flex-shrink: 0 !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -1127,11 +1127,7 @@ html, body {
     margin: 0 !important;
     padding: 0 !important;
 }
-/* УВЕЛИЧИВАЕМ ШИРИНУ КАРТИНОК */
-.small-rectangle {
-    width: 500px !important;     /* было 280px */
-    height: 460px !important;    /* пропорционально увеличиваем высоту */
-}
+
 .text {
     font-family: 'Gerhaus', 'Rubik', sans-serif;
     color:  #94251E;
