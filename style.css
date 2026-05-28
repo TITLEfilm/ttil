@@ -1100,15 +1100,17 @@ html, body {
     max-width: 100vw !important;
     min-height: 460px !important;
     margin: 20px 0 !important;
-    padding: 20px !important;
     overflow-x: auto !important;
     overflow-y: visible !important;
     box-sizing: border-box !important;
 }
+.main-gray-rectangle {
+    padding: 20px 0px 0px 20px !important;  /* верх 40, остальное 20 */
+}
 
 .small-rectangle {
     flex: 0 0 auto !important;
-    width: 400px !important;
+    width: 450px !important;
     height: 460px !important;
     margin: 0 !important;
     padding: 0 !important;
