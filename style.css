@@ -343,6 +343,7 @@ header {
     text-orientation: initial;
 
     transform: none;
+    margin-bottom: 0px;
 }
 .vertical-image {
     position: relative;
