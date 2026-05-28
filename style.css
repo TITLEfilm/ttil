@@ -2357,3 +2357,15 @@ footer::before {
         font-size: 14px;
     }
 }
+/* Фиксируем разумные пределы для картинок */
+.small-rectangle {
+    max-width: 350px;
+    min-width: 260px;
+    width: auto;
+    flex: 0 1 auto;
+}
+
+/* Отодвигаем третью картинку принудительно */
+.rectangle-3 {
+    margin-left: 20px !important;
+}
