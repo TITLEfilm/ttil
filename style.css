@@ -1127,7 +1127,7 @@ html, body {
 /* УВЕЛИЧИВАЕМ ШИРИНУ КАРТИНОК */
 .small-rectangle {
     width: 400px !important;     /* было 280px */
-    height: 560px !important;    /* пропорционально увеличиваем высоту */
+    height: 360px !important;    /* пропорционально увеличиваем высоту */
 }
 .text {
     font-family: 'Gerhaus', 'Rubik', sans-serif;
