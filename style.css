@@ -1104,7 +1104,7 @@ html, body {
     height: auto !important;
     min-height: 350px !important;
     position: relative !important;
-    margin: 20px 0 !important;
+    margin: 0px 0 !important;
     padding: 20px !important;
     flex-wrap: wrap !important;
 }
