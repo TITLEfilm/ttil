@@ -1111,12 +1111,12 @@ html, body {
     overflow-x: clip !important; 
 }
 .rectangle-1 {
-    margin-left: -100px !important;
+    margin-left: -50px !important;
 }
 
 /* ТРЕТЬЯ КАРТИНКА — ВЫЕЗЖАЕТ ВПРАВО И ОБРЕЗАЕТСЯ */
 .rectangle-3 {
-    margin-right: -100px !important;
+    margin-right: -50px !important;
 }
 .small-rectangle {
     flex-shrink: 0 !important;
