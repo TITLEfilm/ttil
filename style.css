@@ -1088,40 +1088,27 @@ html, body {
 }
 
 .main-gray-rectangle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: rgba(217, 217, 217, 0.1);
     height: 480px;
     margin-top: -60px;
     margin-bottom: 50px;
-    overflow-x: clip;
+    overflow: hidden;
+}
+
+.scroll-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    margin-left: -150px;
+    margin-right: -150px;
 }
 
 .small-rectangle {
     width: 750px;
     height: 420px;
     flex-shrink: 0;
-}
-
-/* Отступ между всеми картинками */
-.rectangle-1 {
-    margin-right: 10px;
-}
-.rectangle-2 {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-.rectangle-3 {
-    margin-left: 10px;
-}
-
-/* Выезд за экран */
-.rectangle-1 {
-    margin-left: -150px;
-}
-.rectangle-3 {
-    margin-right: -150px;
 }
 
 .small-rectangle img {
