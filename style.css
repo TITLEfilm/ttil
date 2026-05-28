@@ -1106,7 +1106,7 @@ html, body {
     position: relative !important;
     margin: 20px 0 !important;
     padding: 20px !important;
-    flex-wrap: wrap !important;
+    flex-wrap: nowrap !important;
     overflow: visible !important;
 }
 
