@@ -1107,9 +1107,15 @@ html, body {
     margin: 20px 0 !important;
     padding: 20px !important;
     flex-wrap: wrap !important;
-    overflow-x: clip !important; 
+}
+.rectangle-1 {
+    margin-left: -10px !important;
 }
 
+/* ТРЕТЬЯ КАРТИНКА — ВЫЕЗЖАЕТ ВПРАВО И ОБРЕЗАЕТСЯ */
+.rectangle-3 {
+    margin-right: -10px !important;
+}
 .small-rectangle {
     flex-shrink: 0 !important;
     margin: 0 !important;
