@@ -1118,6 +1118,18 @@ html, body {
 .rectangle-3 {
     transform: translateX(80px);
 }
+/* ЧИНИМ ОБРЕЗАНИЕ СЕРОГО КОНТЕЙНЕРА СВЕРХУ */
+.main-gray-rectangle {
+    margin-top: 40px !important;        /* Отступ сверху, чтобы не обрезалось */
+    position: relative !important;
+    z-index: 2 !important;             /* Поднимаем выше других блоков */
+    overflow: visible !important;      /* Разрешаем показывать содержимое */
+}
+
+/* Если обрезается из-за родителя */
+body, html {
+    overflow-x: visible !important;
+}
 .text {
     font-family: 'Gerhaus', 'Rubik', sans-serif;
     color:  #94251E;
