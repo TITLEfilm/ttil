@@ -1096,7 +1096,8 @@ html, body {
 
 .main-gray-rectangle {
     display: flex !important;
-   
+   justify-content: space-between !important;
+    align-items: center !important;
     gap: 20px !important;
     background-color: rgba(217, 217, 217, 0.1) !important;
     width: 100% !important;
@@ -1106,9 +1107,16 @@ html, body {
     margin: 20px 0 !important;
     padding: 20px !important;
     flex-wrap: wrap !important;
-    overflow: visible !important;
+    overflow-x: clip !important; 
+}
+.rectangle-1 {
+    margin-left: -100px !important;
 }
 
+/* ТРЕТЬЯ КАРТИНКА — ВЫЕЗЖАЕТ ВПРАВО И ОБРЕЗАЕТСЯ */
+.rectangle-3 {
+    margin-right: -100px !important;
+}
 .small-rectangle {
     flex-shrink: 0 !important;
     margin: 0 !important;
