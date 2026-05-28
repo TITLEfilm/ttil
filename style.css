@@ -1086,28 +1086,22 @@ html, body {
     display: block;
     margin-left: -370px;
 }
+/* ===== СЕРЫЙ КОНТЕЙНЕР ===== */
 .main-gray-rectangle {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: rgba(217, 217, 217, 0.1);
-    height: 480px;
-    margin-top: -60px;
-    margin-bottom: 50px;
+    height: 420px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 .small-rectangle {
-    width: 750px;
+    width: 300px;
     height: 420px;
     flex-shrink: 0;
-}
-
-.rectangle-1,
-.rectangle-2,
-.rectangle-3 {
-    margin: 0;
 }
 
 .small-rectangle img {
@@ -1115,6 +1109,14 @@ html, body {
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+/* Дополнительные сдвиги (если нужны) */
+.rectangle-1 {
+    transform: translateX(-80px);
+}
+.rectangle-3 {
+    transform: translateX(80px);
 }
 .text {
     font-family: 'Gerhaus', 'Rubik', sans-serif;
@@ -2356,89 +2358,4 @@ footer::before {
     .text {
         font-size: 14px;
     }
-}
-/* Фиксируем разумные пределы для картинок */
-.small-rectangle {
-    max-width: 350px;
-    min-width: 260px;
-    width: auto;
-    flex: 0 1 auto;
-}
-
-/* Отодвигаем третью картинку принудительно */
-.rectangle-3 {
-    margin-left: 20px !important;
-}.main-gray-rectangle {
-    height: 420px !important;   /* жёсткая высота */
-    max-height: 420px !important;
-    overflow-y: visible;        /* не прячем ничего по вертикали */
-    align-items: center;        /* вертикальное центрирование */
-}.main-gray-rectangle {
-    margin-top: -60px;
-    padding-top: 0;
-    border-top: none;
-}
-/* ЖЁСТКО ЧИНИМ СЕРЫЙ КОНТЕЙНЕР */
-.main-gray-rectangle {
-    height: 420px !important;
-    min-height: 420px !important;
-    max-height: 420px !important;
-    overflow: hidden !important;     /* скрывает всё, что вылезает */
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-wrap: nowrap !important;
-}
-
-/* Картинки не вылезают из контейнера */
-.small-rectangle {
-    max-width: 350px !important;
-    max-height: 420px !important;
-    flex-shrink: 0 !important;
-    height: auto !important;
-}
-/* ===== ЖЁСТКОЕ ИСПРАВЛЕНИЕ СЕРОГО КОНТЕЙНЕРА ===== */
-.main-gray-rectangle {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    background-color: rgba(217, 217, 217, 0.1) !important;
-    height: 420px !important;
-    min-height: 420px !important;
-    max-height: 420px !important;
-    width: 100% !important;
-    margin-top: -60px !important;
-    margin-bottom: 50px !important;
-    padding: 0 !important;
-    overflow: hidden !important;
-    flex-wrap: nowrap !important;
-    gap: 20px !important;
-}
-
-/* Все три картинки */
-.main-gray-rectangle .small-rectangle {
-    width: 300px !important;
-    height: 420px !important;
-    flex-shrink: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-/* Картинки внутри */
-.main-gray-rectangle .small-rectangle img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    display: block !important;
-}
-
-/* Выезд первой влево */
-.main-gray-rectangle .rectangle-1 {
-    margin-left: -100px !important;
-}
-
-/* Выезд третьей вправо */
-.main-gray-rectangle .rectangle-3 {
-    margin-right: -100px !important;
 }
