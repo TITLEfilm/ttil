@@ -1087,25 +1087,26 @@ html, body {
     margin-left: -370px;
 }
 .main-gray-rectangle {
-    display: flex;
-    justify-content: center;
     background-color: rgba(217, 217, 217, 0.1);
     height: 480px;
     margin-top: -60px;
     margin-bottom: 50px;
-    overflow-x: auto;
+    overflow-x: visible;
     overflow-y: hidden;
+    white-space: nowrap;
+    text-align: center;
 }
 
 .small-rectangle {
     width: 750px;
     height: 420px;
-    flex-shrink: 0;
+    display: inline-block;
+    vertical-align: top;
 }
 
-/* Отступы между картинками */
 .rectangle-1 {
     margin-right: 10px;
+    margin-left: -150px;
 }
 .rectangle-2 {
     margin-left: 10px;
@@ -1113,14 +1114,7 @@ html, body {
 }
 .rectangle-3 {
     margin-left: 10px;
-}
-
-/* Убираем выезд за экран */
-.rectangle-1 {
-    margin-left: 0;
-}
-.rectangle-3 {
-    margin-right: 0;
+    margin-right: -150px;
 }
 
 .small-rectangle img {
