@@ -323,7 +323,22 @@ header {
 .vertical-image {
     position: relative;
     display: flex;
-    flex-direction: column;}
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.vertical-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-title-bottom {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
 /* ===== ЗАГОЛОВКИ В НИЖНЕМ ЛЕВОМ УГЛУ (горизонтально, для картинок 2,3,4,6) ===== */
 .image-title-bottom {
     position: absolute;
