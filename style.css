@@ -1097,8 +1097,6 @@ html, body {
 
 .main-gray-rectangle {
     display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
     gap: 20px !important;
     background-color: rgba(217, 217, 217, 0.1) !important;
     width: 100% !important;
@@ -1112,7 +1110,7 @@ html, body {
 }
 
 .small-rectangle {
-    width: 500px !important;
+    width: 400px !important;
     height: 460px !important;
     flex-shrink: 0 !important;
     margin: 0 !important;
