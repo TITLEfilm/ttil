@@ -1659,13 +1659,16 @@ header {
     gap: clamp(8px, 15px, 25px);
 }
 
-/* Заголовки на изображениях */
-.image-title, .image-title-bottom {
+.image-title {
     font-size: clamp(14px, 35px, 50px);
     right: clamp(-15px, -9px, -5px);
     top: clamp(-5px, -2px, 0px);
-    bottom: clamp(-15px, -8px, -5px);
+}
+
+.image-title-bottom {
+    font-size: clamp(14px, 35px, 50px);
     left: clamp(-5px, -2px, 0px);
+    bottom: clamp(-15px, -8px, -5px);
 }
 
 /* Подвал */
