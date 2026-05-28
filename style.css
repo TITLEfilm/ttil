@@ -324,6 +324,10 @@ header {
     margin: 0;
     padding: 0;
 }
+.image-title,
+.image-title-bottom {
+    z-index: 2;
+}
 
 /* ===== ГОРИЗОНТАЛЬНЫЕ ЗАГОЛОВКИ СЛЕВА СНИЗУ ===== */
 /* для картинок 2,3,4,6 */
@@ -332,7 +336,7 @@ header {
     position: absolute;
 
     left: 15px;
-    bottom: 15px;
+    bottom: 0px;
 
     font-family: 'Gerhaus', 'Rubik', sans-serif;
     font-size: 35px;
@@ -347,7 +351,8 @@ header {
     margin: 0;
     padding: 0;
 }
-/* ===== ГРАДИЕНТ СПРАВА НАЛЕВО ДЛЯ КАРТИНОК 7, 8, 9, 10 ===== */
+/* ===== ГРАДИЕНТ СПРАВА НАЛЕВО ===== */
+
 .gradient-img {
     position: relative;
 }
@@ -355,21 +360,22 @@ header {
 .gradient-img::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+    inset: 0;
+
     background: linear-gradient(
         to left,
-        rgba(0, 0, 0, 1) 0%,
-        rgba(0, 0, 0, 0.8) 15%,
-        rgba(0, 0, 0, 0.4) 30%,
-        rgba(0, 0, 0, 0) 45%
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0.8) 15%,
+        rgba(0,0,0,0.4) 30%,
+        rgba(0,0,0,0) 45%
     );
+
+    z-index: 1;
+    pointer-events: none;
 }
 
-/* ===== ГРАДИЕНТ СНИЗУ ВВЕРХ ДЛЯ КАРТИНОК 2, 3, 4, 6 ===== */
+/* ===== ГРАДИЕНТ СНИЗУ ===== */
+
 .gradient-bottom {
     position: relative;
 }
@@ -377,19 +383,20 @@ header {
 .gradient-bottom::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+    inset: 0;
+
     background: linear-gradient(
         to top,
-        rgba(0, 0, 0, 1) 0%,
-        rgba(0, 0, 0, 0.8) 15%,
-        rgba(0, 0, 0, 0.4) 30%,
-        rgba(0, 0, 0, 0) 45%
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0.8) 20%,
+        rgba(0,0,0,0.4) 40%,
+        rgba(0,0,0,0) 60%
     );
+
+    z-index: 1;
+    pointer-events: none;
 }
+
 
 /* ===== ДВУХКОЛОНОЧНЫЕ СЕКЦИИ ===== */
 .left-column .two-columns {
