@@ -291,6 +291,7 @@ header {
     height: 100%;
     object-fit: cover;
     display: block;
+    position: relative;  /* ← ДОБАВЬ ЭТО */
 }
 .vertical-image:hover {
     transform: scale(1.03);
