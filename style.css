@@ -1110,8 +1110,8 @@ html, body {
 
 .small-rectangle {
     flex: 0 0 auto !important;
-    width: 550px !important;
-    height: 460px !important;
+    width: 650px !important;
+    height: 400px !important;
     margin: 0 !important;
     padding: 0 !important;
 }
