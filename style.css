@@ -325,7 +325,7 @@ header {
 /* ===== ЗАГОЛОВКИ В НИЖНЕМ ЛЕВОМ УГЛУ (горизонтально, для картинок 2,3,4,6) ===== */
 .image-title-bottom {
     position: absolute;
-    bottom: -8px;
+    bottom: 0px;
     left: -2px;
     font-family: 'Gerhaus', 'Rubik', sans-serif;
     font-size: 35px;
