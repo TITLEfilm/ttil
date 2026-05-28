@@ -1088,43 +1088,26 @@ html, body {
 }
 .main-gray-rectangle {
     display: flex;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     background-color: rgba(217, 217, 217, 0.1);
     height: 480px;
     margin-top: -60px;
     margin-bottom: 50px;
-    overflow: visible;
-    transform: translateX(0);
 }
 
 .small-rectangle {
     width: 750px;
     height: 420px;
-    flex: 0 0 750px;
-    min-width: 750px;
-    max-width: 750px;
+    flex-shrink: 0;
 }
 
-/* Полностью зачищаем все старые стили */
-.rectangle-1, .rectangle-2, .rectangle-3 {
-    margin: 0 !important;
-}
-
-/* Добавляем отступы через gap у родителя */
-.main-gray-rectangle {
-    gap: 10px;
-}
-
-/* Выезд за экран через translate */
-.rectangle-1 {
-    transform: translateX(-150px);
-}
-
+.rectangle-1,
+.rectangle-2,
 .rectangle-3 {
-    transform: translateX(150px);
+    margin: 0;
 }
 
 .small-rectangle img {
