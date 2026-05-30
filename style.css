@@ -1106,7 +1106,7 @@ html, body {
     box-sizing: border-box !important;
 }
 .main-gray-rectangle {
-    padding: 20px 0px 0px 20px !important;  /* верх 40, остальное 20 */
+    padding: 0px 0px 0px 20px !important;  /* верх 40, остальное 20 */
 }
 
 .small-rectangle {
