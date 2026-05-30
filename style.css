@@ -408,6 +408,7 @@ header {
 
 .left-column .text-block1 {
     margin-bottom: 90px;
+    text-size: 19px;
 }
 
 .right-column .two-columns {
@@ -430,6 +431,7 @@ header {
 
 .right-column .sub-column .text-block {
     margin-bottom: 80px;
+    text-size: 19px;
 }
 
 /* ===== ПОДВАЛ ===== */
